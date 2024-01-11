@@ -35,7 +35,7 @@ public class FireBlobAttack : MonoBehaviour
         Debug.Log("erm what the griddy");
     }
     
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionStay2D(Collision2D col)
     {
      
         if (col.gameObject.tag == "Player")

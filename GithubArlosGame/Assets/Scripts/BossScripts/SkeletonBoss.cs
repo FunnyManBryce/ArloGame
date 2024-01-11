@@ -216,6 +216,12 @@ public class SkeletonBoss : MonoBehaviour
                 ramming = false;
             }
         }
+        if (col.gameObject.tag == "Player")
+        {
+            Health health;
+            health = col.gameObject.GetComponent<Health>();
+            health.GetHit(damage, boss);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -223,12 +229,6 @@ public class SkeletonBoss : MonoBehaviour
         if (col.gameObject.tag == "Wall")
         {
             randomDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-        }
-        if (col.gameObject.tag == "Player")
-        {
-            Health health;
-            health = col.gameObject.GetComponent<Health>();
-            health.GetHit(damage, boss);
         }
     }
     private void rammingStart()

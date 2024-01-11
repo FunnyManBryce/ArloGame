@@ -2420,6 +2420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c53de342dd6d04a8412224e8345182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartScene: 
+  mainMenuScene: 
 --- !u!114 &1658801050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2909,7 +2911,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1546457909}
   m_HandleRect: {fileID: 0}

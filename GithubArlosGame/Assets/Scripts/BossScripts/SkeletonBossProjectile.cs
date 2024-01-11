@@ -76,8 +76,8 @@ public class SkeletonBossProjectile : MonoBehaviour
             Health health;
             health = col.gameObject.GetComponent<Health>();
             health.GetHit(damage, projectile);
-            
+            Destroy(projectile);
         }
-        Destroy(projectile);
+        
     }
 }
