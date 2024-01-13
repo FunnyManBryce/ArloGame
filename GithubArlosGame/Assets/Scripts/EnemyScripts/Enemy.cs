@@ -54,7 +54,6 @@ public class Enemy : MonoBehaviour
                 //Debug.Log("Attacking");
                 agent.speed = 0;
                 isAttacking = true;
-                Debug.Log("yipee!");
             }
         }
     }
@@ -62,7 +61,6 @@ public class Enemy : MonoBehaviour
     public void EnemyDeath()
     {
         ArenaManager.enemiesAlive--;
-        Debug.Log("ermwhatthegriddy");
         Debug.Log(ArenaManager.enemiesAlive);
     }
 }

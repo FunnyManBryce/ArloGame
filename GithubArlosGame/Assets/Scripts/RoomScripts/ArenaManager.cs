@@ -17,18 +17,16 @@ public class ArenaManager : MonoBehaviour
     float spawnTimer;
     void Start()
     {
-        //WaveStart();
+        enemiesAlive = 0; //code might screw me over later we'll see
         enemiesToSpawn = enemiesPerWave[Wave];
-            waveStarted = true;
-            spawnTimer = Random.Range(1, 2);
-
+        waveStarted = true;
+        spawnTimer = Random.Range(1, 2);
     }
 
     void Update()
     {
         if (enemiesToSpawn > 0 && spawnTimer <= 0)
         {
-            Debug.Log("enemy spawned???");
             Instantiate(enemies[Random.Range(0,enemies.Length)], spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
             enemiesToSpawn--;
             enemiesAlive++;
@@ -42,15 +40,20 @@ public class ArenaManager : MonoBehaviour
         if(waveStarted == true && enemiesAlive == 0 && enemiesToSpawn == 0)
         {
             Wave++;
+            Debug.Log("Wave Number: " + Wave);
             enemiesToSpawn = enemiesPerWave[Wave];
             waveStarted = true;
             spawnTimer = Random.Range(1, 2);
             if(Wave == 4)
             {
                 Instantiate(boss, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
             }
-            //WaveStart();
-            //waveStarted = false;
+            /*if(Wave == 5)
+            {
+                //go to victory scene
+            }*/
+           
         }
     }
 

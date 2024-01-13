@@ -1334,7 +1334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stage: 0
   Wave: 0
-  enemiesPerWave: 0100000001000000010000000100000000000000
+  enemiesPerWave: 010000000200000004000000060000000000000000000000
   enemies:
   - {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}
   - {fileID: 7237991207398816772, guid: 6f4d1aaab19bcb048ad3152bd4cc5b11, type: 3}

@@ -176,9 +176,11 @@ public class SkeletonBoss : MonoBehaviour
                         if (doneFiring == false)
                         {
                             Instantiate(summon, new Vector3(summonPositionOne.position.x, summonPositionOne.position.y), Quaternion.identity);
+                            ArenaManager.enemiesAlive++;
                             if (currentPhase == 2)
                             {
                                 Instantiate(summon, new Vector3(summonPositionTwo.position.x, summonPositionTwo.position.y), Quaternion.identity);
+                                ArenaManager.enemiesAlive++;
                             }
                             doneFiring = true;
                         }
@@ -231,9 +233,16 @@ public class SkeletonBoss : MonoBehaviour
             randomDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         }
     }
+
     private void rammingStart()
     {
         moving = false;
         ramming = true;
+    }
+
+    public void BossDeath()
+    {
+        ArenaManager.enemiesAlive--;
+        Debug.Log(ArenaManager.enemiesAlive);
     }
 }
