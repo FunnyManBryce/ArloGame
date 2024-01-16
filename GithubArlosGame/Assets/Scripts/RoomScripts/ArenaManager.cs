@@ -12,6 +12,7 @@ public class ArenaManager : MonoBehaviour
     public GameObject[] enemies;
     public GameObject[] spawnPoints;
     public GameObject boss;
+    public GameObject victoryPage;
     bool waveStarted = false;
     bool bossAlive;
     float spawnTimer;
@@ -49,10 +50,11 @@ public class ArenaManager : MonoBehaviour
                 Instantiate(boss, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
             }
-            /*if(Wave == 5)
+            if(Wave == 5)
             {
                 //go to victory scene
-            }*/
+                victoryPage.SetActive(true);
+            }
            
         }
     }
