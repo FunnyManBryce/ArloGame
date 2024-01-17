@@ -54,6 +54,7 @@ public class ArenaManager : MonoBehaviour
             {
                 //go to victory scene
                 victoryPage.SetActive(true);
+                Debug.Log("huh");
             }
            
         }

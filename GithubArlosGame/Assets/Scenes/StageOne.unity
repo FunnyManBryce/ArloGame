@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+  m_Color: {r: 0.26906073, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: KILL YOUR SELF
+  m_text: VICTORY!!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1291,8 +1291,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283585204
-  m_fontColor: {r: 0.7075472, g: 0.3230687, b: 0.3230687, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stage: 0
   Wave: 0
-  enemiesPerWave: 000000000000000000000000000000000000000000000000
+  enemiesPerWave: 010000000200000004000000060000000000000000000000
   enemies:
   - {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}
   - {fileID: 7237991207398816772, guid: 6f4d1aaab19bcb048ad3152bd4cc5b11, type: 3}
@@ -1570,7 +1570,7 @@ MonoBehaviour:
   - {fileID: 973380521}
   - {fileID: 105649723}
   boss: {fileID: 7364709920442944923, guid: 574b99a115ab56e418f1e7cb32b5d49d, type: 3}
-  victoryPage: {fileID: 0}
+  victoryPage: {fileID: 938028624}
 --- !u!4 &1214718291
 Transform:
   m_ObjectHideFlags: 0
