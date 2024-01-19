@@ -7,7 +7,7 @@ public class PauseMenu : RestartScene
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (Time.timeScale == 1)
             {
