@@ -183,6 +183,7 @@ MonoBehaviour:
         m_CallState: 2
   isDead: 0
   isInvincible: 0
+  isPlayer: 0
   invincibilityDuration: 0.5
   invincibilityFeedback: {fileID: 0}
   player: {fileID: 0}

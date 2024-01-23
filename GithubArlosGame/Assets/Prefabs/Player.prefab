@@ -216,6 +216,7 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   isInvincible: 0
+  isPlayer: 1
   invincibilityDuration: 1
   invincibilityFeedback: {fileID: 0}
   player: {fileID: 2384011829972160131}
