@@ -275,8 +275,8 @@ MonoBehaviour:
   dashLength: 0.15
   dashCooldown: 1
   currentExperience: 0
-  maxExperience: 0
-  currentLevel: 0
+  maxExperience: 300
+  currentLevel: 1
   health: {fileID: 6613822001154775121}
   healthBar: {fileID: 0}
 --- !u!95 &3292883008654064437

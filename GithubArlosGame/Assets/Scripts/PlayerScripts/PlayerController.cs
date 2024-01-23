@@ -21,9 +21,9 @@ public class playerController : MonoBehaviour
     private bool isDashing;
     private float dashTimer;
 
-    [SerializeField] int currentExperience;
-    [SerializeField] int maxExperience;
-    [SerializeField] int currentLevel;
+    public float currentExperience;
+    public float maxExperience;
+    public int currentLevel;
 
     private Vector2 oldMovementInput;
     public Vector2 playerInput { get; set; }
@@ -34,6 +34,16 @@ public class playerController : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        ExperienceManager.Instance.OnExperienceChange += HandleExperiencChange;
+    }
+
+    private void OnDisable()
+    {
+        ExperienceManager.Instance.OnExperienceChange -= HandleExperiencChange;
     }
 
     private void Start()
@@ -81,6 +91,16 @@ public class playerController : MonoBehaviour
             }
         }
     }
+    private void HandleExperiencChange(int newExperience)
+    {
+        currentExperience += newExperience;
+        if (currentExperience >= maxExperience)
+        {
+            LevelUp();
+            currentExperience -= maxExperience;
+            currentLevel++;
+        }
+    }
     public void PerformDash()
     {
         isDashing = true;
@@ -96,18 +116,13 @@ public class playerController : MonoBehaviour
             isDashing = false;
         }
     }
-    private void ExperiencChange(int newExperience)
-    {
-        currentExperience += newExperience;
-        if (currentExperience >= maxExperience)
-        {
-            LevelUp();
-        }
-    }
     
     private void LevelUp()
     {
-       
+        health.maxHealth += 25;
+        health.currentHealth = health.maxHealth;
+        maxExperience += 100f;
+        healthBar.SetHealth(health.currentHealth);
     }
 
     public void OnTakeDamage() 
