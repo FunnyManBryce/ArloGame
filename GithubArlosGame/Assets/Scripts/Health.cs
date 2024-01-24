@@ -12,11 +12,14 @@ public class Health : MonoBehaviour
 
     [SerializeField] private bool isDead = false;
     public bool isInvincible = false;
+    public bool isPlayer;
     [SerializeField] private float invincibilityDuration = 1.5f;
 
     [SerializeField] private PlayerBlinkFeedback invincibilityFeedback;
 
     [SerializeField] playerController player;
+
+
     public void InitializeHealth(int healthValue)
     {
         currentHealth = healthValue;
@@ -43,7 +46,11 @@ public class Health : MonoBehaviour
             {
                 StartCoroutine(StartInvicibilty());
             }
-            player.OnTakeDamage();
+            if(isPlayer == true)
+            {
+                player.OnTakeDamage();
+            }
+            
         }
         else
         {
