@@ -39,6 +39,7 @@ public class Weapon : MonoBehaviour
 
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(attackOrigin.position, radius))
         {
+            Debug.Log(collider.name);
 
             KnockbackFeedback knockbackScript = collider.GetComponent<KnockbackFeedback>();
 
