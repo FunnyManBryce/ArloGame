@@ -101,7 +101,6 @@ public class SkeletonBoss : MonoBehaviour
                     {
                         if (doneFiring == false)
                         {
-                            Debug.Log("firing");
                             skeletonBossProjectile.projectileNumber = 1;
                             Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y + 0.75f), Quaternion.identity);
                             skeletonBossProjectile.projectileNumber = 2;
@@ -243,6 +242,5 @@ public class SkeletonBoss : MonoBehaviour
     public void BossDeath()
     {
         ArenaManager.enemiesAlive--;
-        Debug.Log(ArenaManager.enemiesAlive);
     }
 }
