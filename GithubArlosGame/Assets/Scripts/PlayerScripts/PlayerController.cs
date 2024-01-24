@@ -34,17 +34,20 @@ public class playerController : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        ExperienceManager.Instance.OnExperienceChange += HandleExperiencChange;
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
-        ExperienceManager.Instance.OnExperienceChange += HandleExperiencChange;
+        Debug.Log("Please dont fucking work i beg");
+    ExperienceManager.Instance.OnExperienceChange += HandleExperiencChange;
     }
 
     private void OnDisable()
     {
+        
         ExperienceManager.Instance.OnExperienceChange -= HandleExperiencChange;
-    }
+    }*/
 
     private void Start()
     {
@@ -91,8 +94,9 @@ public class playerController : MonoBehaviour
             }
         }
     }
-    private void HandleExperiencChange(int newExperience)
+    public void HandleExperiencChange(int newExperience)
     {
+        Debug.Log("add exp pleaseeeeeeeeeeeeeee");
         currentExperience += newExperience;
         if (currentExperience >= maxExperience)
         {

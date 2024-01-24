@@ -22,6 +22,8 @@ public class ExperienceManager : MonoBehaviour
     #endregion //Awake void
     public void AddExperience(int amount)
     {
+        Debug.Log("Added " + amount + " experience");
         OnExperienceChange?.Invoke(amount);
+
     }
 }
