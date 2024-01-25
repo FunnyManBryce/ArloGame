@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 5610933737388946578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.893, y: -0.155, z: 0}
-  m_LocalScale: {x: 4, y: 5, z: 1}
+  m_LocalPosition: {x: 0.864, y: -0.147, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7813040375866853342}
@@ -288,7 +288,7 @@ MonoBehaviour:
   cooldown: 0
   attackDistance: 3
   moveSpeed: 2
-  expAmount: 100
+  expAmount: 250
 --- !u!114 &2705977029009518425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 5350981621533051967}
-  blinkDuration: 0.1
-  blinkColor: {r: 1, g: 0.35283017, b: 0.35283017, a: 1}
+  blinkDuration: 0.2
+  blinkColor: {r: 1, g: 0, b: 0, a: 1}
   blinkCount: 1
 --- !u!114 &1543793245734311059
 MonoBehaviour:
@@ -375,7 +375,6 @@ MonoBehaviour:
         m_CallState: 2
   isDead: 0
   isInvincible: 0
-  isPlayer: 0
   invincibilityDuration: 0.5
   invincibilityFeedback: {fileID: 0}
   player: {fileID: 0}
@@ -450,7 +449,7 @@ Animator:
   m_GameObject: {fileID: 7237991207398816772}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 51edf7769ec8a1c408bcb6cf2bb06a76, type: 2}
+  m_Controller: {fileID: 9100000, guid: 38b8f49e84fd07f449a233247c3cc050, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -556,7 +555,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerPosition: {x: 0, y: 0}
   enemyAttackOrigin: {fileID: 2399267956746580600}
-  enemyRadius: 1
+  enemyRadius: 1.25
   enemyDamage: 40
   attackDuration: 1
   attackCooldown: 2
