@@ -15,10 +15,11 @@ public class playerController : MonoBehaviour
     [SerializeField] 
     private float currentSpeed = 0;
     public float dashSpeed;
+    public bool canDash = true;
 
     public float dashLength = 0.5f, dashCooldown = 1f;
 
-    private bool isDashing;
+    [SerializeField] bool isDashing;
     private float dashTimer;
 
     public float currentExperience;
@@ -52,6 +53,7 @@ public class playerController : MonoBehaviour
 
         animator.SetBool("IsDashing", isDashing);
         animator.SetFloat("Speed", currentSpeed);
+        animator.SetBool("CanDash", canDash);
         if (!isDashing)
         {
             if (playerInput.magnitude > 0 && currentSpeed >= 0)
@@ -100,19 +102,39 @@ public class playerController : MonoBehaviour
     public void PerformDash()
     {
         isDashing = true;
+
+        //Set the length of the dash to the how fair the dash would go
         dashTimer = dashLength;
     }
-    private void Dash ()
+    private void Dash()
     {
-        rb2d.velocity = oldMovementInput.normalized * dashSpeed;
-        dashTimer -= Time.deltaTime;
-        
-        if(dashTimer <= 0f)
+        if (canDash)
         {
-            isDashing = false;
+            rb2d.velocity = oldMovementInput.normalized * dashSpeed;
+            dashTimer -= Time.deltaTime;
+            canDash = false;
+        }
+        else
+        {
+            return;
         }
     }
-    
+
+
+    public void DashReset()
+    {
+        Debug.Log("why?");
+        isDashing = false;
+    }
+
+    public void CanDashReset()
+    {
+        if (!canDash)
+        {
+            canDash = true;
+        }
+    }
+
     private void LevelUp()
     {
         health.maxHealth += 25;

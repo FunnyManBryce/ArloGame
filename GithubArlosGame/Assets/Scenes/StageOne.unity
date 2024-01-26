@@ -442,7 +442,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
   m_PrefabInstance: {fileID: 2064257085}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1232598643}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35044020c02bb1c4f9c5fbadf4132a85, type: 3}
@@ -2916,6 +2916,55 @@ Transform:
   - {fileID: 819175786}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1232598643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 907792579629526303, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+  m_PrefabInstance: {fileID: 2064257085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1232598648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+  m_PrefabInstance: {fileID: 2064257085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232598643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163a94817b6994e40a5450b1b9763a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1232598652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232598643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7711a2e38c2ad45bb49954a38982e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAnimationEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1232598648}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: DashReset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnAttackPerformed:
+    m_PersistentCalls:
+      m_Calls: []
+  EnemyAttackPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1283492183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,13 +3917,13 @@ MonoBehaviour:
   OnAnimationEventTriggered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1232598648}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: CanDashReset
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5685,7 +5734,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 907792579629526303, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1232598652}
   m_SourcePrefab: {fileID: 100100000, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
 --- !u!1 &2066606442
 GameObject:
