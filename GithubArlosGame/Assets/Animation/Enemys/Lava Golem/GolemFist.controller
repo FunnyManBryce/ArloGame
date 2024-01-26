@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SkellySwordAttack
+  m_Name: GolemFistAttack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4f467e1ae501ad04d868fd0bc73dbe2b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 92a35259694e2dc4eb027269a2ef9596, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SkellySwordIdle
+  m_Name: GolemFistIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -73,7 +73,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8aa51490fa5c929419f2bf5ae4a4d469, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1bddbab6732dabb4cb5b8e2207646445, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
