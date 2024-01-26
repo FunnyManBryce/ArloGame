@@ -35,12 +35,6 @@ public class playerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
-
-    private void OnEnable()
-    {
-        ExperienceManager.Instance.OnExperienceChange += HandleExperiencChange;
-    }
-
     private void OnDisable()
     {
         ExperienceManager.Instance.OnExperienceChange -= HandleExperiencChange;
@@ -50,10 +44,12 @@ public class playerController : MonoBehaviour
     {
         playerInput = transform.position;
         healthBar.SetMaxHealth(health.maxHealth);
+        ExperienceManager.Instance.OnExperienceChange += HandleExperiencChange;
     }
 
     private void FixedUpdate()
     {
+
         animator.SetBool("IsDashing", isDashing);
         animator.SetFloat("Speed", currentSpeed);
         if (!isDashing)

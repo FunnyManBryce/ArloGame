@@ -74,9 +74,9 @@ GameObject:
   - component: {fileID: 5906694651761291528}
   - component: {fileID: 6442463325534920144}
   - component: {fileID: 6613822001154775121}
+  - component: {fileID: 2384011829972160131}
   - component: {fileID: 7172060563188714282}
   - component: {fileID: 1359200291390473696}
-  - component: {fileID: 2384011829972160131}
   - component: {fileID: 3292883008654064437}
   - component: {fileID: 7860652255683599203}
   m_Layer: 6
@@ -216,10 +216,35 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   isInvincible: 0
-  isPlayer: 1
   invincibilityDuration: 1
   invincibilityFeedback: {fileID: 0}
   player: {fileID: 2384011829972160131}
+--- !u!114 &2384011829972160131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907792579629526303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163a94817b6994e40a5450b1b9763a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3292883008654064437}
+  PlayerSprite: {fileID: 5906694651761291528}
+  maxSpeed: 10
+  acceleration: 10
+  deacceleration: 20
+  currentSpeed: 0
+  dashSpeed: 20
+  dashLength: 0.15
+  dashCooldown: 1
+  currentExperience: 0
+  maxExperience: 300
+  currentLevel: 1
+  health: {fileID: 6613822001154775121}
+  healthBar: {fileID: 0}
 --- !u!114 &7172060563188714282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,32 +279,6 @@ MonoBehaviour:
   mousePosition: {fileID: -4853190023952275590, guid: 56d867135bb373747a5c907b1ce9c6ac, type: 3}
   dash: {fileID: -8998772995788612356, guid: 56d867135bb373747a5c907b1ce9c6ac, type: 3}
   dashAnimator: {fileID: 0}
---- !u!114 &2384011829972160131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907792579629526303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163a94817b6994e40a5450b1b9763a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 3292883008654064437}
-  PlayerSprite: {fileID: 5906694651761291528}
-  maxSpeed: 10
-  acceleration: 10
-  deacceleration: 20
-  currentSpeed: 0
-  dashSpeed: 20
-  dashLength: 0.15
-  dashCooldown: 1
-  currentExperience: 0
-  maxExperience: 300
-  currentLevel: 1
-  health: {fileID: 6613822001154775121}
-  healthBar: {fileID: 0}
 --- !u!95 &3292883008654064437
 Animator:
   serializedVersion: 5

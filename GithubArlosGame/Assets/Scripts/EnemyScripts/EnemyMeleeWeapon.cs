@@ -58,6 +58,7 @@ public class EnemyMeleeWeapon : MonoBehaviour
     {
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(enemyAttackOrigin.position, enemyRadius))
         {
+            Debug.Log(collider.name);
             Health health;
             if (health = collider.GetComponent<Health>())
             {
