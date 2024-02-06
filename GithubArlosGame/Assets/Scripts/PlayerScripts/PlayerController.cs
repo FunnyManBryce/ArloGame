@@ -19,7 +19,7 @@ public class playerController : MonoBehaviour
 
     public float dashLength = 0.5f, dashCooldown = 1f;
 
-    [SerializeField] bool isDashing;
+    public bool isDashing;
     private float dashTimer;
 
     public float currentExperience;
@@ -31,6 +31,8 @@ public class playerController : MonoBehaviour
 
     [SerializeField] Health health;
     public HealthBar healthBar;
+    public GameObject pauseMenu;
+    public GameObject levelUpMenu;
 
     private void Awake()
     {
@@ -137,8 +139,11 @@ public class playerController : MonoBehaviour
 
     private void LevelUp()
     {
+        Time.timeScale = 0;
+        pauseMenu.SetActive(false);
+        levelUpMenu.SetActive(true);
         health.maxHealth += 25;
-        health.currentHealth = health.maxHealth;
+        health.currentHealth += 50;
         maxExperience += 100f;
         healthBar.SetHealth(health.currentHealth);
     }

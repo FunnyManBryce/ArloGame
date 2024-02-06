@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 1359200291390473696}
   - component: {fileID: 3292883008654064437}
   - component: {fileID: 7860652255683599203}
+  - component: {fileID: 3986512596438471315}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -237,9 +238,11 @@ MonoBehaviour:
   acceleration: 10
   deacceleration: 20
   currentSpeed: 0
-  dashSpeed: 20
-  dashLength: 0.15
+  dashSpeed: 40
+  canDash: 1
+  dashLength: 0.2
   dashCooldown: 1
+  isDashing: 0
   currentExperience: 0
   maxExperience: 300
   currentLevel: 1
@@ -345,6 +348,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.20608851, y: 0.14550757}
   m_EdgeRadius: 0
+--- !u!114 &3986512596438471315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907792579629526303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7711a2e38c2ad45bb49954a38982e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAnimationEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2384011829972160131}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: DashReset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnAttackPerformed:
+    m_PersistentCalls:
+      m_Calls: []
+  EnemyAttackPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3802213251933928274
 GameObject:
   m_ObjectHideFlags: 0

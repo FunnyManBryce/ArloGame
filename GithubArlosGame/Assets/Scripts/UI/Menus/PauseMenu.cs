@@ -33,7 +33,9 @@ public class PauseMenu : RestartScene
     }
     public void Restart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(restartScene);
+        pauseMenu.SetActive(false); 
     }
 
     public void Quit()
