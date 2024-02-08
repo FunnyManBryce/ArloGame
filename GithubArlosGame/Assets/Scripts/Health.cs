@@ -47,7 +47,6 @@ public class Health : MonoBehaviour
         }
         else
         {
-            Debug.Log("balls");
             OnDeathWithRefrence?.Invoke(sender);
             isDead = true;
             Destroy(gameObject);

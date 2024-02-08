@@ -29,11 +29,12 @@ public class playerController : MonoBehaviour
     private Vector2 oldMovementInput;
     public Vector2 playerInput { get; set; }
 
-    [SerializeField] Health health;
+    public Health health;
     public HealthBar healthBar;
     public GameObject pauseMenu;
     public GameObject levelUpMenu;
-
+    //stuff I wont change
+    #region
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -91,16 +92,10 @@ public class playerController : MonoBehaviour
             }
         }
     }
-    private void HandleExperiencChange(int newExperience)
-    {
-        currentExperience += newExperience;
-        if (currentExperience >= maxExperience)
-        {
-            LevelUp();
-            currentExperience -= maxExperience;
-            currentLevel++;
-        }
-    }
+    #endregion   //
+
+    //dash shit when I figure that out
+    #region
     public void PerformDash()
     {
         isDashing = true;
@@ -134,6 +129,19 @@ public class playerController : MonoBehaviour
         if (!canDash)
         {
             canDash = true;
+        }
+    }
+
+    #endregion
+
+    private void HandleExperiencChange(int newExperience)
+    {
+        currentExperience += newExperience;
+        if (currentExperience >= maxExperience)
+        {
+            LevelUp();
+            currentExperience -= maxExperience;
+            currentLevel++;
         }
     }
 

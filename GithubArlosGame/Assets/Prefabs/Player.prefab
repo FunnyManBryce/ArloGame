@@ -243,11 +243,13 @@ MonoBehaviour:
   dashLength: 0.2
   dashCooldown: 1
   isDashing: 0
-  currentExperience: 0
+  currentExperience: 200
   maxExperience: 300
   currentLevel: 1
   health: {fileID: 6613822001154775121}
   healthBar: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  levelUpMenu: {fileID: 0}
 --- !u!114 &7172060563188714282
 MonoBehaviour:
   m_ObjectHideFlags: 0
