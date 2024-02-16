@@ -32,7 +32,7 @@ public class ArenaManager : MonoBehaviour
             enemiesToSpawn--;
             enemiesAlive++;
             spawnTimer = Random.Range(1, 3);
-            Debug.Log("enemies to spawn" + enemiesToSpawn);
+            //Debug.Log("enemies to spawn" + enemiesToSpawn);
         }
         else if (waveStarted == true)
         {
@@ -41,7 +41,7 @@ public class ArenaManager : MonoBehaviour
         if(waveStarted == true && enemiesAlive == 0 && enemiesToSpawn == 0)
         {
             Wave++;
-            Debug.Log("Wave Number: " + Wave);
+            //Debug.Log("Wave Number: " + Wave);
             enemiesToSpawn = enemiesPerWave[Wave];
             waveStarted = true;
             spawnTimer = Random.Range(1, 2);
@@ -54,7 +54,7 @@ public class ArenaManager : MonoBehaviour
             {
                 //go to victory scene
                 victoryPage.SetActive(true);
-                Debug.Log("huh");
+                //Debug.Log("huh");
             }
            
         }

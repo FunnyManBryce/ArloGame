@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyMeleeWeapon : MonoBehaviour
 {
-    Enemy enemyScript;
+    public Enemy enemyScript;
     public GameObject enemy;
     public GameObject weapon;
-    [SerializeField] Transform target;
+    public Transform target;
     public Vector2 playerPosition;
     public Transform enemyAttackOrigin;
     public float enemyRadius;
