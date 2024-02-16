@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartScene: StageOne
   mainMenuScene: MainMenu
-  levelUpOptions: []
+  levelUpEffects: []
 --- !u!1 &1283492183
 GameObject:
   m_ObjectHideFlags: 0
