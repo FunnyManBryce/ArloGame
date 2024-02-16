@@ -9,6 +9,7 @@ public class PauseMenu : RestartScene
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            Debug.Log("tab pressed");
             if (Time.timeScale == 1)
             {
                 Pause();

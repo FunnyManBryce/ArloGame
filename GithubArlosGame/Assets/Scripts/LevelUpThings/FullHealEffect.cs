@@ -10,6 +10,7 @@ public class FullHealEffect : LevelUpEffect
     {
         GameObject player = GameObject.FindWithTag("Player");
 
+        
         if (player != null)
         {
             playerController = player.GetComponent<playerController>();
