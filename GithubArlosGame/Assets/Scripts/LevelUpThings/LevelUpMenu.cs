@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class LevelUpMenu : RestartScene
 {
     public List<LevelUpEffect> levelUpEffects;
+    public Button[] setButtons;
 
     public void Resume()
     {
@@ -21,9 +22,15 @@ public class LevelUpMenu : RestartScene
 
         Button[] buttons = GetComponentsInChildren<Button>();
 
-        foreach (Button button in buttons)
+        foreach (Button button in setButtons)
         {
-            Debug.Log(button.name);
+            if (button == null)
+            {
+                Debug.LogWarning("Button reference not assigned.");
+                continue;
+            }
+
+            Debug.Log("BUTTON clicked?");
 
             LevelUpEffect randomEffect = levelUpEffects[Random.Range(0, levelUpEffects.Count)];
 
