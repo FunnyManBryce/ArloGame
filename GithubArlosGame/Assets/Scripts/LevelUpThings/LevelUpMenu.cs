@@ -12,15 +12,15 @@ public class LevelUpMenu : RestartScene
         Time.timeScale = 1;
     }
 
-    public void ApplyRandomEffects()
+ public void ApplyRandomEffects()
+{
+    if (levelUpEffects.Count == 0)
     {
-        if (levelUpEffects.Count == 0)
-        {
-            Debug.LogWarning("No level up effects assigned.");
-            return;
-        }
+        Debug.LogWarning("No level up effects assigned.");
+        return;
+    }
 
-        Button[] buttons = GetComponentsInChildren<Button>();
+    Button[] buttons = GetComponentsInChildren<Button>();
 
         foreach (Button button in setButtons)
         {
@@ -30,11 +30,12 @@ public class LevelUpMenu : RestartScene
                 continue;
             }
 
-            Debug.Log("BUTTON clicked?");
+            LevelUpEffect randomEffect = levelUpEffects[Random.Range(0, levelUpEffects.Count)]; // Create local variable here
 
-            LevelUpEffect randomEffect = levelUpEffects[Random.Range(0, levelUpEffects.Count)];
-
-            button.onClick.AddListener(() => randomEffect.ApplyEffect());
+            button.onClick.AddListener(() =>
+            {
+                randomEffect.ApplyEffect(); // Use the local variable here
+            });
         }
     }
 }
