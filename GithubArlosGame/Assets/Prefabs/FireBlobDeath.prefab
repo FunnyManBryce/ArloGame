@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5236269712293434365}
   - component: {fileID: 5057713961856374844}
   m_Layer: 0
-  m_Name: SkeletonDeath
+  m_Name: FireBlobDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.61, y: -2.82, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96154e86dc0580f428bc81e26136bbbe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aca507b5c2b743d48ba483aa01989152, type: 3}
   m_Color: {r: 1, g: 0.98490566, b: 0.98490566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4307ec58473d63846a91e2275a1dfe13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 5
+  timeToDestroy: 0.35
 --- !u!95 &5057713961856374844
 Animator:
   serializedVersion: 5
@@ -109,7 +109,7 @@ Animator:
   m_GameObject: {fileID: 1890700133121522558}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 90f1b0b2944d20f4385d1dc94be77ecf, type: 2}
+  m_Controller: {fileID: 9100000, guid: ad89a22469484894daae788e000f3c83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

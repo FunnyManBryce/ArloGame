@@ -9,6 +9,7 @@ public class FireBlobAttack : MonoBehaviour
     public GameObject projectile;
     public Transform enemyPosition;
     public int damage;
+    static public Vector3 projectileRotation;
     //public float attackDelay = 0.01f;
     // Start is called before the first frame update
     void Start()
@@ -26,14 +27,18 @@ public class FireBlobAttack : MonoBehaviour
     public void Death()
     {
         //Invoke("DeathAttack", attackDelay);
-        skeletonBossProjectile.projectileNumber = 1;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x, enemyPosition.position.y ), Quaternion.identity);
-        skeletonBossProjectile.projectileNumber = 2;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x, enemyPosition.position.y), Quaternion.identity);
-        skeletonBossProjectile.projectileNumber = 3;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x + 1, enemyPosition.position.y), Quaternion.identity);
-        skeletonBossProjectile.projectileNumber = 4;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x - 1, enemyPosition.position.y), Quaternion.identity);
+        projectileRotation = new Vector3(0, 0, 90);
+        Quaternion newRotation = Quaternion.Euler(projectileRotation);
+        Instantiate(projectile, new Vector3(enemyPosition.position.x, enemyPosition.position.y ), newRotation);
+        projectileRotation = new Vector3(0, 0, -90);
+        newRotation = Quaternion.Euler(projectileRotation);
+        Instantiate(projectile, new Vector3(enemyPosition.position.x, enemyPosition.position.y), newRotation);
+        projectileRotation = new Vector3(0, 0, 0);
+        newRotation = Quaternion.Euler(projectileRotation);
+        Instantiate(projectile, new Vector3(enemyPosition.position.x + 1, enemyPosition.position.y), newRotation);
+        projectileRotation = new Vector3(0, 0, 180);
+        newRotation = Quaternion.Euler(projectileRotation);
+        Instantiate(projectile, new Vector3(enemyPosition.position.x - 1, enemyPosition.position.y), newRotation);
     }
     
     /*void DeathAttack()

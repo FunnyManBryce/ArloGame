@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 9093927112975305915}
   - component: {fileID: 5305931798316139799}
   - component: {fileID: 8779652763202776775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireBlob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
