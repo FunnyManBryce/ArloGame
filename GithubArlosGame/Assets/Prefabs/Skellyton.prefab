@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8320848553850917319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SummonPointOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6024907119843935094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SummonPointTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 4894214719209350057}
   - component: {fileID: 8236505457849073057}
   - component: {fileID: 7384669807664534565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skellyton
   m_TagString: Untagged
   m_Icon: {fileID: 0}

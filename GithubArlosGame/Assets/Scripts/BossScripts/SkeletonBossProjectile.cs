@@ -9,9 +9,8 @@ public class SkeletonBossProjectile : MonoBehaviour
     public float travelSpeed;
     public float lifespan = 3f;
 
-    public Vector2 projectileTrajectory;
+    public Vector2 projectileTrajectory = new Vector2(1, 0);
 
-    public int projectileNumber;
     public int damage = 1;
     // Start is called before the first frame update
     void Start()
@@ -27,47 +26,8 @@ public class SkeletonBossProjectile : MonoBehaviour
         {
             Destroy(projectile);
         }
-        if(projectileNumber == 1)
-        {
-            projectileTrajectory = new Vector2(0, 1);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        if (projectileNumber == 2)
-        {
-            projectileTrajectory = new Vector2(0, -1);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        if (projectileNumber == 3)
-        {
-            projectileTrajectory = new Vector2(1, 0);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        if (projectileNumber == 4)
-        {
-            projectileTrajectory = new Vector2(-1, 0);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        if (projectileNumber == 5)
-        {
-            projectileTrajectory = new Vector2(0.5f, 0.5f);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        if (projectileNumber == 6)
-        {
-            projectileTrajectory = new Vector2(0.5f, -0.5f);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        if (projectileNumber == 7)
-        {
-            projectileTrajectory = new Vector2(-0.5f, 0.5f);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        if (projectileNumber == 8)
-        {
-            projectileTrajectory = new Vector2(-0.5f, -0.5f);
-            transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
-        }
-        
+        projectileTrajectory = new Vector2(1, 0);
+        transform.Translate(projectileTrajectory * Time.deltaTime * travelSpeed);
     }
     void OnCollisionEnter2D(Collision2D col)
     {

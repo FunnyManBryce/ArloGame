@@ -42,6 +42,8 @@ public class SkeletonBoss : MonoBehaviour
     Vector2 bossPosition;
     Vector2 playerPosition;
     Vector2 distanceFromPlayer;
+    static public Vector3 projectileRotation;
+
 
     private Vector2 randomDir;
 
@@ -102,24 +104,32 @@ public class SkeletonBoss : MonoBehaviour
                         if (doneFiring == false)
                         {
                             Debug.Log("firing");
-                            skeletonBossProjectile.projectileNumber = 1;
-                            Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y + 0.75f), Quaternion.identity);
-                            skeletonBossProjectile.projectileNumber = 2;
-                            Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y - 0.5f), Quaternion.identity);
-                            skeletonBossProjectile.projectileNumber = 3;
-                            Instantiate(projectile, new Vector3(bossTarget.position.x + 1, bossTarget.position.y - 0.25f), Quaternion.identity);
-                            skeletonBossProjectile.projectileNumber = 4;
-                            Instantiate(projectile, new Vector3(bossTarget.position.x - 1, bossTarget.position.y - 0.25f), Quaternion.identity);
+                            projectileRotation = new Vector3(0, 0, 90);
+                            Quaternion newRotation = Quaternion.Euler(projectileRotation);
+                            Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
+                            projectileRotation = new Vector3(0, 0, -90);
+                            newRotation = Quaternion.Euler(projectileRotation);
+                            Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
+                            projectileRotation = new Vector3(0, 0, 0);
+                            newRotation = Quaternion.Euler(projectileRotation);
+                            Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
+                            projectileRotation = new Vector3(0, 0, 180);
+                            newRotation = Quaternion.Euler(projectileRotation);
+                            Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
                             if (currentPhase == 2)
                             {
-                                skeletonBossProjectile.projectileNumber = 5;
-                                Instantiate(projectile, new Vector3(bossTarget.position.x + 0.75f, bossTarget.position.y + 0.75f), Quaternion.identity);
-                                skeletonBossProjectile.projectileNumber = 6;
-                                Instantiate(projectile, new Vector3(bossTarget.position.x + 0.75f, bossTarget.position.y - 0.5f), Quaternion.identity);
-                                skeletonBossProjectile.projectileNumber = 7;
-                                Instantiate(projectile, new Vector3(bossTarget.position.x - 0.75f, bossTarget.position.y + 0.75f), Quaternion.identity);
-                                skeletonBossProjectile.projectileNumber = 8;
-                                Instantiate(projectile, new Vector3(bossTarget.position.x - 0.75f, bossTarget.position.y - 0.5f), Quaternion.identity);
+                                projectileRotation = new Vector3(0, 0, 45);
+                                newRotation = Quaternion.Euler(projectileRotation);
+                                Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
+                                projectileRotation = new Vector3(0, 0, -45);
+                                newRotation = Quaternion.Euler(projectileRotation);
+                                Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
+                                projectileRotation = new Vector3(0, 0, 135);
+                                newRotation = Quaternion.Euler(projectileRotation);
+                                Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
+                                projectileRotation = new Vector3(0, 0, -135);
+                                newRotation = Quaternion.Euler(projectileRotation);
+                                Instantiate(projectile, new Vector3(bossTarget.position.x, bossTarget.position.y), newRotation);
                             }
                             doneFiring = true;
                         }

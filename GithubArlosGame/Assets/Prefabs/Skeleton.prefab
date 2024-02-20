@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1724016228136927211}
   - component: {fileID: 3033195910397784118}
   - component: {fileID: 3173739196401929768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 4372065627759552304}
   - component: {fileID: 6855674094567783765}
   - component: {fileID: 9093927112975305915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abfe065ce69dfc49ae32bea84bb7881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToSpawn: {fileID: 1890700133121522558, guid: e9f44c4f92a6ef7418e9f93b082ef954, type: 3}
+  gameObjectToSpawn: {fileID: 1890700133121522558, guid: cdff825f99a0bdd4cb66a8d7ed2bb2b5, type: 3}
 --- !u!50 &4372065627759552304
 Rigidbody2D:
   serializedVersion: 4
@@ -515,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7813040375866853342}
   - component: {fileID: 904117496829935116}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d98a75b4185eb4fa44596eec2ea1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyScript: {fileID: 0}
   enemy: {fileID: 7237991207398816772}
   weapon: {fileID: 5610933737388946578}
   target: {fileID: 0}
