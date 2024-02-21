@@ -286,7 +286,7 @@ MonoBehaviour:
   weaponAttack: {fileID: 3173739196401929768}
   isAttacking: 0
   cooldown: 0
-  attackDistance: 8
+  attackDistance: 12
   moveSpeed: 3
   expAmount: 100
 --- !u!114 &2705977029009518425
