@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Blockbuster
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4177d88c497ed45ceb23a0bf02bd49b7, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
