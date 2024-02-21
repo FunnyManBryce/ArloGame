@@ -8,8 +8,6 @@ public class LevelUpMenu : RestartScene
 
     public List<Button> buttons;
 
-
-
     public void Resume()
     {
         Time.timeScale = 1;

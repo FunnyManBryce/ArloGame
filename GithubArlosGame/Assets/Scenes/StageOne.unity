@@ -3513,8 +3513,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartScene: StageOne
   mainMenuScene: MainMenu
-  levelUpEffects: []
-  setButtons: []
+  levelUpEffects:
+  - {fileID: -3637319336589809177, guid: d73fda1ea5f78294b94c999e053af373, type: 3}
+  buttons:
+  - {fileID: 442762470}
 --- !u!1 &1283492183
 GameObject:
   m_ObjectHideFlags: 0
@@ -6412,11 +6414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
       propertyPath: currentHealth
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
