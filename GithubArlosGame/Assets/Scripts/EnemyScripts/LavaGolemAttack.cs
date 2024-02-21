@@ -5,6 +5,8 @@ using UnityEngine;
 public class LavaGolemAttack : EnemyMeleeWeapon
 {
     public GameObject shockwave;
+    public GameObject weaponParent;
+    public Shockwave shockwaveScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,4 +32,10 @@ public class LavaGolemAttack : EnemyMeleeWeapon
             transform.localScale = scale;
         }
     }
+
+    public void Shockwave()
+    {
+      Instantiate(shockwave, new Vector3(enemyAttackOrigin.position.x, enemyAttackOrigin.position.y), weaponParent.transform.rotation);
+    }
+    
 }

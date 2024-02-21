@@ -733,6 +733,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1273716608}
+        m_TargetAssemblyTypeName: LevelUpMenu, Assembly-CSharp
+        m_MethodName: InitializeMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &442762471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1247,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &636123732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636123733}
+  - component: {fileID: 636123734}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &636123733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636123732}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &636123734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636123732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd9801c2587cf748b87b4ceb41e6fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Dash
+    clip: {fileID: 8300000, guid: 80e5d5497a6b048f982af85f858ea7ed, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: b74782371da0d4c6e984451a48c57816, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Swing
+    clip: {fileID: 8300000, guid: f04a63a7966da4e2ebf322e0eb251714, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Walk
+    clip: {fileID: 8300000, guid: fd1d214329c2f459ba6a0f15099f3360, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
 --- !u!1001 &641300637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1243,6 +1320,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169298092832444896, guid: 132bf370f05624e4295ca3880159bf15, type: 3}
+      propertyPath: shockwave
+      value: 
+      objectReference: {fileID: 732376385253157997, guid: 0d39954e15be88e4e8938eaeebc67fbf, type: 3}
+    - target: {fileID: 2681123645195253281, guid: 132bf370f05624e4295ca3880159bf15, type: 3}
+      propertyPath: Center
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4838719328554928952, guid: 132bf370f05624e4295ca3880159bf15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2165165
@@ -1282,6 +1367,10 @@ PrefabInstance:
     - target: {fileID: 4838719328554928952, guid: 132bf370f05624e4295ca3880159bf15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310674962363718910, guid: 132bf370f05624e4295ca3880159bf15, type: 3}
+      propertyPath: Center
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7237991207398816772, guid: 132bf370f05624e4295ca3880159bf15, type: 3}
       propertyPath: m_Name
@@ -2647,7 +2736,7 @@ Camera:
   far clip plane: 1000
   field of view: 44
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3270,7 +3359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stage: 0
   Wave: 0
-  enemiesPerWave: 010000000200000004000000060000000000000000000000
+  enemiesPerWave: 010000000100000001000000010000000000000000000000
   enemies:
   - {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}
   - {fileID: 7237991207398816772, guid: 6f4d1aaab19bcb048ad3152bd4cc5b11, type: 3}
@@ -3339,7 +3428,7 @@ MonoBehaviour:
   m_Follow: {fileID: 99220915}
   m_Lens:
     FieldOfView: 44
-    OrthographicSize: 4.5
+    OrthographicSize: 6.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3366,7 +3455,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3836155, y: -1.1259844, z: -11.087394}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 819175786}
@@ -3436,8 +3525,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartScene: StageOne
   mainMenuScene: MainMenu
-  levelUpEffects: []
-  setButtons: []
+  levelUpEffects:
+  - {fileID: -3637319336589809177, guid: d73fda1ea5f78294b94c999e053af373, type: 3}
+  buttons:
+  - {fileID: 442762470}
 --- !u!1 &1283492183
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,6 +6424,14 @@ PrefabInstance:
       propertyPath: currentExperience
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: currentHealth
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6874,3 +6973,4 @@ SceneRoots:
   - {fileID: 422152435}
   - {fileID: 641300637}
   - {fileID: 500806866}
+  - {fileID: 636123733}

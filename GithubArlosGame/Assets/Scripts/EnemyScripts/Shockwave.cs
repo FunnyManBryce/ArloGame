@@ -8,57 +8,37 @@ public class Shockwave : MonoBehaviour
     public Enemy enemyScript;
     public GameObject shockwave;
     public int shockwaveDamage = 30;
-    public Transform Corner1;
-    public Transform Corner2;
-    public Transform Center;
-    public Vector3 centerPoint;
-    public Vector2 point1;
-    public Vector2 point2;
-    
-    // Start is called before the first frame update
+    public Vector2 Trajectory;
+    public float travelSpeed;
+    public float lifespan = 3f;
+
     void Start()
     {
-        
+
+        Trajectory = new Vector2(1, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        point1 = new Vector2(Corner1.position.x, Corner1.position.y);
-        point2 = new Vector2(Corner2.position.x, Corner2.position.y);
-        centerPoint = new Vector3(Center.position.x, Center.position.y, Center.position.z);
-
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.blue;
-        Vector3 position = Center == null ? Vector3.zero : Center.position;
-        Gizmos.DrawWireCube(position, centerPoint);
-    }
-
-    public void DetectColliders()
-    {
-        Debug.Log("why");
-        foreach (Collider2D collider in Physics2D.OverlapAreaAll(point1, point2))
+        lifespan -= Time.deltaTime;
+        transform.Translate(Trajectory * Time.deltaTime * travelSpeed);
+        if (lifespan <= 0)
         {
-            Debug.Log("yipee");
-            Debug.Log(collider.name);
-            Health health;
-            if (health = collider.GetComponent<Health>())
-            {
-                health.GetHit(shockwaveDamage, transform.parent.gameObject);
-            }
+            Destroy(shockwave);
         }
     }
-    /*private void OnCollisionStay2D(Collision2D col)
+
+    
+    private void OnCollisionStay2D(Collision2D col)
     {
 
         if (col.gameObject.tag == "Player")
         {
             Health health;
             health = col.gameObject.GetComponent<Health>();
-            health.GetHit(damage, shockwave);
+            health.GetHit(shockwaveDamage, shockwave);
+            Destroy(shockwave);
+
         }
-    }*/
+    }
 }

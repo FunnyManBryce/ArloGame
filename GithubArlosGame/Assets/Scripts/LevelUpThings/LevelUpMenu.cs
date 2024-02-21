@@ -5,36 +5,28 @@ using UnityEngine.UI;
 public class LevelUpMenu : RestartScene
 {
     public List<LevelUpEffect> levelUpEffects;
-    public Button[] setButtons;
+
+    public List<Button> buttons;
 
     public void Resume()
     {
         Time.timeScale = 1;
     }
 
-    public void ApplyRandomEffects()
+    public void InitializeMenu()
     {
-        if (levelUpEffects.Count == 0)
+
+        if (buttons.Count == 0 || levelUpEffects.Count == 0)
         {
-            Debug.LogWarning("No level up effects assigned.");
+            Debug.LogWarning("Buttons or level up effects are not assigned.");
             return;
         }
 
-        Button[] buttons = GetComponentsInChildren<Button>();
-
-        foreach (Button button in setButtons)
+        for (int i = 0; i < buttons.Count; i++)
         {
-            if (button == null)
-            {
-                Debug.LogWarning("Button reference not assigned.");
-                continue;
-            }
-
-            Debug.Log("BUTTON clicked?");
-
             LevelUpEffect randomEffect = levelUpEffects[Random.Range(0, levelUpEffects.Count)];
 
-            button.onClick.AddListener(() => randomEffect.ApplyEffect());
+            buttons[i].onClick.AddListener(() => randomEffect.ApplyEffect());
         }
     }
 }
