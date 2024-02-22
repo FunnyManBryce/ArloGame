@@ -15,7 +15,7 @@ public class LevelUpMenu : RestartScene
 
     public void Start()
     {
-InitializeMenu();
+        InitializeMenu();
     }
 
     public void InitializeMenu()
