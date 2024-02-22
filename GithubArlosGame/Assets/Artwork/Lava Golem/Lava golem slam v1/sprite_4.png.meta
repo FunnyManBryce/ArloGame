@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 370f7e064ce8b72408a712ace5afa776
+guid: 956a36e8852aa17478aa5c5d5049d011
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -122,69 +122,11 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline:
-    - - {x: 6, y: -18}
-      - {x: 3, y: -17}
-      - {x: 1, y: -17}
-      - {x: 6, y: -17}
-      - {x: 10.672958, y: -8.297693}
-      - {x: 2.9580688, y: 10}
-      - {x: 16, y: 32}
-      - {x: -20, y: 32}
-      - {x: -6.7903557, y: 7.9056587}
-      - {x: -17.272537, y: -7.331457}
-      - {x: -17.272535, y: -26.748428}
-      - {x: -26, y: -32}
-      - {x: 13, y: -32}
-      - {x: 13, y: -31}
-      - {x: 12, y: -20}
-      - {x: 8, y: -18}
-    - - {x: -17.12369, y: -15.922432}
-      - {x: -16.350105, y: -16.490566}
-      - {x: -18.614256, y: -23.102726}
-      - {x: -17.12369, y: -24.677149}
-      - {x: -22, y: -23}
-      - {x: -19, y: -20}
-      - {x: -19, y: -18}
-      - {x: -16.213837, y: -17.012579}
-    - - {x: 15, y: -14}
-      - {x: 12, y: -17}
-      - {x: 12, y: -19}
-      - {x: 15, y: -22}
-      - {x: 11.71698, y: -22.083858}
-      - {x: 13.794548, y: -21.515724}
-      - {x: 11.111111, y: -12.974842}
-      - {x: 10.375259, y: -10.310272}
-    - - {x: -18, y: -6}
-      - {x: -13, y: 0}
-      - {x: -13, y: 2}
-      - {x: -14, y: 3}
-      - {x: -12, y: 5}
-      - {x: -10, y: 5}
-      - {x: -7, y: 8}
-      - {x: -7, y: 11}
-      - {x: -9, y: 12}
-      - {x: -7, y: 9}
-      - {x: -11, y: 6}
-      - {x: -12, y: 3}
-      - {x: -16, y: -1}
-      - {x: -16, y: -7}
-      - {x: -17, y: -8}
-      - {x: -17, y: -7}
-    - - {x: 4, y: 6}
-      - {x: 5, y: 5}
-      - {x: 7, y: 6}
-      - {x: 6, y: 5}
-      - {x: 7, y: 1}
-      - {x: 8, y: 2}
-    - - {x: 2, y: 11}
-      - {x: 4, y: 12}
-      - {x: 3, y: 10}
-      - {x: 3, y: 11}
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
