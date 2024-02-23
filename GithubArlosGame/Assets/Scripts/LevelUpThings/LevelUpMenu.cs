@@ -13,6 +13,11 @@ public class LevelUpMenu : RestartScene
         Time.timeScale = 1;
     }
 
+    public void Start()
+    {
+        InitializeMenu();
+    }
+
     public void InitializeMenu()
     {
 
