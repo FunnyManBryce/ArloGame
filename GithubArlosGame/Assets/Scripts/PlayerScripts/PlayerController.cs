@@ -10,8 +10,7 @@ public class playerController : MonoBehaviour
     public Animator animator;
     [SerializeField] SpriteRenderer PlayerSprite;
 
-    [SerializeField] 
-    private float maxSpeed = 2, acceleration = 50, deacceleration = 100;
+    public float maxSpeed = 2, acceleration = 50, deacceleration = 100;
     [SerializeField] 
     private float currentSpeed = 0;
     public float dashSpeed;
