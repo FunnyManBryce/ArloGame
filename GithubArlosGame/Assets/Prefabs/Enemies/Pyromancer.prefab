@@ -553,7 +553,7 @@ MonoBehaviour:
   attackDistance: 8
   moveSpeed: 2
   player: {fileID: 0}
-  expAmount: 100
+  expAmount: 150
   isRunning: 0
   isSummoning: 0
   runDistance: 6
@@ -619,6 +619,6 @@ MonoBehaviour:
   pyromancerScript: {fileID: 3850249636531706277}
   fireball: {fileID: 1438435654808208330, guid: 09b1e07124541db42b185231437a7361, type: 3}
   weaponParent: {fileID: 8077793320127356881}
-  fireBlob: {fileID: 7237991207398816772, guid: 6f4d1aaab19bcb048ad3152bd4cc5b11, type: 3}
+  fireBlob: {fileID: 7237991207398816772, guid: 6bf08a37aa3eac54a88f2fd2fa1cbaaa, type: 3}
   Object: {fileID: 4425562221351594760}
   spawnPoint: {fileID: 3242877364191597674}
