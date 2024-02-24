@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LavaGolemAttack : EnemyMeleeWeapon
+public class PyroAttacks : EnemyMeleeWeapon
 {
-    public GameObject shockwave;
+    public GameObject fireball;
     public GameObject weaponParent;
     //public Shockwave shockwaveScript;
     // Start is called before the first frame update
@@ -33,9 +33,8 @@ public class LavaGolemAttack : EnemyMeleeWeapon
         }
     }
 
-    public void Shockwave()
+    public void Fireball()
     {
-      Instantiate(shockwave, new Vector3(enemyAttackOrigin.position.x, enemyAttackOrigin.position.y), weaponParent.transform.rotation);
+        Instantiate(fireball, new Vector3(enemyAttackOrigin.position.x, enemyAttackOrigin.position.y), weaponParent.transform.rotation);
     }
-    
 }

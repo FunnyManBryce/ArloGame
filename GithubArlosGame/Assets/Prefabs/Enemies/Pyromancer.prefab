@@ -104,7 +104,7 @@ MonoBehaviour:
   OnAttackPerformed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 904117496829935116}
+      - m_Target: {fileID: 604902002818250030}
         m_TargetAssemblyTypeName: EnemyMeleeWeapon, Assembly-CSharp
         m_MethodName: EnemyAttack
         m_Mode: 1
@@ -119,9 +119,9 @@ MonoBehaviour:
   EnemyAttackPerformed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 904117496829935116}
-        m_TargetAssemblyTypeName: EnemyMeleeWeapon, Assembly-CSharp
-        m_MethodName: DetectColliders
+      - m_Target: {fileID: 604902002818250030}
+        m_TargetAssemblyTypeName: PyroAttacks, Assembly-CSharp
+        m_MethodName: Fireball
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -296,8 +296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35044020c02bb1c4f9c5fbadf4132a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 70
-  maxHealth: 70
+  currentHealth: 80
+  maxHealth: 80
   OnHitWithRefrence:
     m_PersistentCalls:
       m_Calls:
@@ -507,11 +507,11 @@ MonoBehaviour:
   isAttacking: 0
   cooldown: 0
   attackDistance: 8
-  moveSpeed: 3
+  moveSpeed: 2
   player: {fileID: 0}
   expAmount: 100
   isRunning: 0
-  runDistance: 4
+  runDistance: 6
 --- !u!1 &8077793320127356881
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7813040375866853342}
-  - component: {fileID: 904117496829935116}
+  - component: {fileID: 604902002818250030}
   m_Layer: 8
   m_Name: WeaponParent
   m_TagString: Untagged
@@ -545,7 +545,7 @@ Transform:
   - {fileID: 2399267956746580600}
   m_Father: {fileID: 4838719328554928952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
---- !u!114 &904117496829935116
+--- !u!114 &604902002818250030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8077793320127356881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d98a75b4185eb4fa44596eec2ea1f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 99c7497a6f7442745abbffbbdc150d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyScript: {fileID: 0}
@@ -565,6 +565,8 @@ MonoBehaviour:
   enemyAttackOrigin: {fileID: 2399267956746580600}
   enemyRadius: 0
   enemyDamage: 0
-  attackDuration: 0.7
-  attackCooldown: 0.7
+  attackDuration: 1
+  attackCooldown: 2
   player: {fileID: 0}
+  fireball: {fileID: 1438435654808208330, guid: 09b1e07124541db42b185231437a7361, type: 3}
+  weaponParent: {fileID: 8077793320127356881}
