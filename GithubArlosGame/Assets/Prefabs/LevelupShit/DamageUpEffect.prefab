@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonColor: {r: 0, g: 0, b: 0, a: 0}
-  buttonText: 
+  buttonText: DAM
   buttonIcon: {fileID: 0}
   Player: {fileID: 0}
