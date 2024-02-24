@@ -6350,13 +6350,17 @@ PrefabInstance:
       propertyPath: attackDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3850249636531706277, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4838719328554928952, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.986112
+      value: 4.18
       objectReference: {fileID: 0}
     - target: {fileID: 4838719328554928952, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07171166
+      value: -3.63
       objectReference: {fileID: 0}
     - target: {fileID: 4838719328554928952, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
       propertyPath: m_LocalPosition.z

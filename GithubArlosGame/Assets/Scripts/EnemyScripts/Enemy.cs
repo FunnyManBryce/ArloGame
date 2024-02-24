@@ -5,19 +5,19 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform target;
-    [SerializeField] Transform enemyTarget;
-    NavMeshAgent agent;
+    public Transform target;
+    public Transform enemyTarget;
+    public NavMeshAgent agent;
     public Animator animator;
     public Animator weaponAttack;
-    Vector3 enemyPosition;
-    Vector3 playerPosition;
-    Vector3 distanceFromPlayer;
+    public Vector3 enemyPosition;
+    public Vector3 playerPosition;
+    public Vector3 distanceFromPlayer;
     public bool isAttacking = false;
     public bool cooldown = false;
     public float attackDistance = 2;
     public float moveSpeed = 3;
-    GameObject player;
+    public GameObject player;
 
     [SerializeField] int expAmount = 100;
 
@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = 0;
-        //startingPosition = new Vector3(enemyTarget.position.x, enemyTarget.position.y, 0);
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
     }

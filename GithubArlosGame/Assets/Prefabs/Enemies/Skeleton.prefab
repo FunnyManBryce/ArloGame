@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d98a75b4185eb4fa44596eec2ea1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyScript: {fileID: 0}
+  enemyScript: {fileID: 2803945144463659862}
   enemy: {fileID: 7237991207398816772}
   weapon: {fileID: 5610933737388946578}
   target: {fileID: 0}
