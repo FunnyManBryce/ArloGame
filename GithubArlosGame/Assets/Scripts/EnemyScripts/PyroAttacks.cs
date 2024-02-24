@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PyroAttacks : EnemyMeleeWeapon
 {
+    public PyromancerAI pyromancerScript;
     public GameObject fireball;
     public GameObject weaponParent;
+    public GameObject fireBlob;
+    public Transform spawnPoint;
     //public Shockwave shockwaveScript;
     // Start is called before the first frame update
     void Start()
@@ -31,10 +34,22 @@ public class PyroAttacks : EnemyMeleeWeapon
 
             transform.localScale = scale;
         }
+        if (enemyScript.isAttacking == true)
+        {
+            weapon.GetComponent<Renderer>().enabled = false;
+        }
     }
 
     public void Fireball()
     {
         Instantiate(fireball, new Vector3(enemyAttackOrigin.position.x, enemyAttackOrigin.position.y), weaponParent.transform.rotation);
+    }
+
+    public void Summon()
+    {
+        Instantiate(fireBlob, new Vector3(spawnPoint.position.x, spawnPoint.position.y), Quaternion.identity);
+        pyromancerScript.isSummoning = false;
+        StartCoroutine(DelayAttack());
+        Debug.Log("erm");
     }
 }

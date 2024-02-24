@@ -5,7 +5,9 @@ using UnityEngine;
 public class PyromancerAI : Enemy
 {
     public bool isRunning;
+    public bool isSummoning;
     public float runDistance;
+    public int fireballsTillSummon;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,24 +29,34 @@ public class PyromancerAI : Enemy
             distanceFromPlayer = new Vector3(enemyPosition.x - playerPosition.x, enemyPosition.y - playerPosition.y, 0);
             animator.SetFloat("Speed", agent.speed);
             animator.SetBool("Attacking", isAttacking);
+            animator.SetBool("Summoning", isSummoning);
             weaponAttack.SetBool("Attacking", isAttacking);
-            if (distanceFromPlayer.magnitude > attackDistance && isAttacking == false && isRunning == false)
+            weaponAttack.SetBool("Summoning", isSummoning);
+            if (distanceFromPlayer.magnitude > attackDistance && isAttacking == false && isRunning == false && isSummoning == false)
             {
                 //Debug.Log("Chasing");
                 agent.speed = moveSpeed;
                 agent.SetDestination(target.position);
             }
-            if(distanceFromPlayer.magnitude < runDistance && isAttacking == false)
+            if(distanceFromPlayer.magnitude < runDistance && isAttacking == false && isSummoning == false)
             {
                 isRunning = true;
                 agent.speed = moveSpeed + 4;
                 agent.SetDestination(-target.position);
             }
-            if (distanceFromPlayer.magnitude < attackDistance && cooldown == false)
+            if (distanceFromPlayer.magnitude < attackDistance && cooldown == false && isSummoning == false && isAttacking == false)
             {
-                //Debug.Log("Attacking");
                 agent.speed = 0;
-                isAttacking = true;
+                if(fireballsTillSummon > 0)
+                {
+                    isAttacking = true;
+                    fireballsTillSummon--;
+                    
+                } else
+                {
+                    isSummoning = true;
+                    fireballsTillSummon = 2;
+                }
             }
         }
     }
