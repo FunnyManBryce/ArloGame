@@ -558,7 +558,8 @@ MonoBehaviour:
   isSummoning: 0
   runDistance: 6
   fireballsTillSummon: 2
-  maxSummons: 2
+  maxSummons: 3
+  currentSummons: 0
 --- !u!1 &8077793320127356881
 GameObject:
   m_ObjectHideFlags: 0

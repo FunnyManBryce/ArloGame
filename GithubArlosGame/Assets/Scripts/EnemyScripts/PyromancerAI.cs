@@ -49,14 +49,15 @@ public class PyromancerAI : Enemy
             if (distanceFromPlayer.magnitude < attackDistance && cooldown == false && isSummoning == false && isAttacking == false)
             {
                 agent.speed = 0;
-                if(fireballsTillSummon > 0)
+                if(fireballsTillSummon > 0 || maxSummons == currentSummons)
                 {
                     isAttacking = true;
                     fireballsTillSummon--;
                     
-                } else
+                } else if(maxSummons != currentSummons)
                 {
                     isSummoning = true;
+                    currentSummons++;
                     fireballsTillSummon = 2;
                 }
             }
