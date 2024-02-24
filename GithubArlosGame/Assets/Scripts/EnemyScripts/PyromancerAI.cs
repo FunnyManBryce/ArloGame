@@ -8,6 +8,8 @@ public class PyromancerAI : Enemy
     public bool isSummoning;
     public float runDistance;
     public int fireballsTillSummon;
+    public int maxSummons;
+    public int currentSummons;
     // Start is called before the first frame update
     void Start()
     {
