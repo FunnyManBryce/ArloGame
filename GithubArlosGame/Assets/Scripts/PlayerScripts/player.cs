@@ -14,7 +14,7 @@ public class player : MonoBehaviour
 
     public Vector2 PointerInput => pointerInput;
 
-    private weaponParent WeaponParent;
+    public weaponParent WeaponParent;
 
     [SerializeField] Animator dashAnimator;
 
