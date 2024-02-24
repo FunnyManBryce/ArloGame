@@ -18,6 +18,7 @@ public class FullHealEffect : LevelUpEffect
             if (playerController != null)
             {
                 playerController.health.currentHealth = playerController.health.maxHealth;
+                playerController.OnTakeDamage();
             }
             else
             {

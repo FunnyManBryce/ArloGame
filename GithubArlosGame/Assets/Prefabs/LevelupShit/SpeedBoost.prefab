@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonColor: {r: 1, g: 0, b: 0, a: 0}
-  buttonText: SPEeD
+  buttonText: Speed
   buttonIcon: {fileID: 0}
   playerController: {fileID: 0}

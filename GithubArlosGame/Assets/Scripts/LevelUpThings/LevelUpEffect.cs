@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LevelUpEffect : MonoBehaviour
 {
-    public Color buttonColor;
     public string buttonText;
     public Sprite buttonIcon;
     

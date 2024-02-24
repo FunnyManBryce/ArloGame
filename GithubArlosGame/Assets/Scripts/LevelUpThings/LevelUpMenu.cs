@@ -37,7 +37,7 @@ public class LevelUpMenu : RestartScene
             if (buttonText != null)
             {
                 buttonText.text = randomEffect.buttonText;  
-            }
+            }   
             else
             {
                 Debug.LogWarning("Text component not found on the button.");
