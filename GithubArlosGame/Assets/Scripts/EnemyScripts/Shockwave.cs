@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shockwave : MonoBehaviour
 {
-    public LavaGolemAttack lavaGolemAttack;
+    //public LavaGolemAttack lavaGolemAttack;
     public Enemy enemyScript;
     public GameObject shockwave;
     public int shockwaveDamage = 30;

@@ -28,11 +28,17 @@ public class PyromancerAI : Enemy
             animator.SetFloat("Speed", agent.speed);
             animator.SetBool("Attacking", isAttacking);
             weaponAttack.SetBool("Attacking", isAttacking);
-            if (distanceFromPlayer.magnitude > attackDistance && isAttacking == false)
+            if (distanceFromPlayer.magnitude > attackDistance && isAttacking == false && isRunning == false)
             {
                 //Debug.Log("Chasing");
                 agent.speed = moveSpeed;
                 agent.SetDestination(target.position);
+            }
+            if(distanceFromPlayer.magnitude < runDistance && isAttacking == false)
+            {
+                isRunning = true;
+                agent.speed = moveSpeed + 4;
+                agent.SetDestination(-target.position);
             }
             if (distanceFromPlayer.magnitude < attackDistance && cooldown == false)
             {

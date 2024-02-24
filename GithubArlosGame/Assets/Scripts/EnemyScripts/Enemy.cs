@@ -59,9 +59,7 @@ public class Enemy : MonoBehaviour
 
     public void EnemyDeath()
     {
-        Debug.Log("Enemy died");
         ExperienceManager.Instance.AddExperience(expAmount);
         ArenaManager.enemiesAlive--;
-        Debug.Log(ArenaManager.enemiesAlive);
     }
 }
