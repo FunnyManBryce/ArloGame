@@ -34,8 +34,9 @@ public class PyromancerAI : Enemy
             animator.SetBool("Summoning", isSummoning);
             weaponAttack.SetBool("Attacking", isAttacking);
             weaponAttack.SetBool("Summoning", isSummoning);
-            if (distanceFromPlayer.magnitude > attackDistance && isAttacking == false && isRunning == false && isSummoning == false)
+            if (distanceFromPlayer.magnitude > runDistance && isAttacking == false && isSummoning == false)
             {
+                isRunning = false;
                 //Debug.Log("Chasing");
                 agent.speed = moveSpeed;
                 agent.SetDestination(target.position);
@@ -63,4 +64,5 @@ public class PyromancerAI : Enemy
             }
         }
     }
+
 }

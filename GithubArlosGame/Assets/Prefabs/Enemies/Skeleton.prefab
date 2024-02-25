@@ -282,13 +282,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   enemyTarget: {fileID: 4838719328554928952}
+  agent: {fileID: 0}
   animator: {fileID: 6855674094567783765}
   weaponAttack: {fileID: 3173739196401929768}
+  enemyPosition: {x: 0, y: 0, z: 0}
+  playerPosition: {x: 0, y: 0, z: 0}
+  distanceFromPlayer: {x: 0, y: 0, z: 0}
   isAttacking: 0
   cooldown: 0
   attackDistance: 2
   moveSpeed: 3
-  expAmount: 100
+  player: {fileID: 0}
+  expAmount: 50
 --- !u!114 &2705977029009518425
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,8 +18,8 @@ public class DamageUpEffect : LevelUpEffect
 
             if (Player != null)
             {
-                Player.WeaponParent.weapons[0].damage = Player.WeaponParent.weapons[0].damage + 5;
-                Player.WeaponParent.weapons[1].damage = Player.WeaponParent.weapons[1].damage + 10;
+                Player.WeaponParent.weapons[0].damage = Player.WeaponParent.weapons[0].damage + 2;
+                Player.WeaponParent.weapons[1].damage = Player.WeaponParent.weapons[1].damage + 4;
             }
             else
             {

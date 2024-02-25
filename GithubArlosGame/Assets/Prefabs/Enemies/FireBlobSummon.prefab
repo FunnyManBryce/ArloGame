@@ -89,7 +89,7 @@ MonoBehaviour:
   attackDistance: 0
   moveSpeed: 5
   player: {fileID: 0}
-  expAmount: 50
+  expAmount: 0
 --- !u!114 &2705977029009518425
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -267,7 +267,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7237991207398816772}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 0
   m_Acceleration: 15
   avoidancePriority: 50
@@ -305,7 +305,7 @@ MonoBehaviour:
   attackDistance: 4
   moveSpeed: 2
   player: {fileID: 0}
-  expAmount: 250
+  expAmount: 125
 --- !u!114 &2705977029009518425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,8 +334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35044020c02bb1c4f9c5fbadf4132a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 125
-  maxHealth: 125
+  currentHealth: 150
+  maxHealth: 150
   OnHitWithRefrence:
     m_PersistentCalls:
       m_Calls:
@@ -580,4 +580,3 @@ MonoBehaviour:
   player: {fileID: 0}
   shockwave: {fileID: 732376385253157997, guid: 0d39954e15be88e4e8938eaeebc67fbf, type: 3}
   weaponParent: {fileID: 8077793320127356881}
-  shockwaveScript: {fileID: 2669994244214953699, guid: 0d39954e15be88e4e8938eaeebc67fbf, type: 3}

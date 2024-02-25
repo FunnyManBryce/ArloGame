@@ -11,6 +11,10 @@ public class ArenaManager : MonoBehaviour
     public int[] enemiesPerWave;
     public List<GameObject> enemies;
     public GameObject[] spawnPoints;
+    public GameObject Skeleton;
+    public GameObject FireBlob;
+    public GameObject Pyromancer;
+    public GameObject lavaGolem;
     public GameObject boss1;
     public GameObject boss2;
     public GameObject victoryPage;
@@ -46,17 +50,84 @@ public class ArenaManager : MonoBehaviour
             enemiesToSpawn = enemiesPerWave[Wave];
             waveStarted = true;
             spawnTimer = Random.Range(1, 2);
-            if(Wave == 5)
+            if(Wave == 4)
             {
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
             }
-            if(Wave == 15)
+            if(Wave == 5)
+            {
+                enemies.Add(FireBlob);
+                Instantiate(FireBlob, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if(Wave == 6)
+            {
+                enemies.Add(FireBlob);
+                Instantiate(FireBlob, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(FireBlob, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if (Wave == 7)
+            {
+                enemies.Add(FireBlob);
+                enemies.Add(Pyromancer);
+                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if (Wave == 8)
+            {
+                enemies.Add(Pyromancer);
+                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if (Wave == 9)
+            {
+                enemies.Add(lavaGolem);
+                Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if(Wave == 10)
+            {
+                Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if(Wave == 11)
+            {
+                Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if (Wave == 12)
+            {
+                Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if (Wave == 13)
+            {
+                Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if (Wave == 14)
             {
                 Instantiate(boss2, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
             }
-            if(Wave == 16)
+            if(Wave == 15)
             {
                 //go to victory scene
                 victoryPage.SetActive(true);
