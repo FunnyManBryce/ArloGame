@@ -4398,6 +4398,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393488250}
   m_CullTransparentMesh: 1
+--- !u!4 &1412141295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3242877364191597674, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
+  m_PrefabInstance: {fileID: 1761023646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1438804159
 GameObject:
   m_ObjectHideFlags: 0
@@ -6334,7 +6339,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!1001 &1904556298
+--- !u!1001 &1761023646
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -6342,13 +6347,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 604902002818250030, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1412141295}
     - target: {fileID: 4838719328554928952, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.311921
+      value: 5.0729175
       objectReference: {fileID: 0}
     - target: {fileID: 4838719328554928952, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.340598
+      value: -3.8545163
       objectReference: {fileID: 0}
     - target: {fileID: 4838719328554928952, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6980,4 +6989,4 @@ SceneRoots:
   - {fileID: 843015678}
   - {fileID: 889610029}
   - {fileID: 411894273}
-  - {fileID: 1904556298}
+  - {fileID: 1761023646}

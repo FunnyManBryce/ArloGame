@@ -243,7 +243,7 @@ MonoBehaviour:
   player: {fileID: 0}
   projectile: {fileID: 1438435654808208330, guid: 2d728e5933df12c44bb0d4c320f6f04d, type: 3}
   boss: {fileID: 7364709920442944923}
-  summon: {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}
+  summon: {fileID: 7237991207398816772, guid: d48dac256fb027f4188f267f8cac6185, type: 3}
   skeletonBossProjectile: {fileID: 1778373908096998757, guid: 2d728e5933df12c44bb0d4c320f6f04d, type: 3}
   health: {fileID: 1592640175677549316}
   damage: 25
@@ -257,6 +257,7 @@ MonoBehaviour:
   playerTarget: {fileID: 0}
   summonPositionOne: {fileID: 8320848553850917319}
   summonPositionTwo: {fileID: 6024907119843935094}
+  expAmount: 400
 --- !u!61 &4894214719209350057
 BoxCollider2D:
   m_ObjectHideFlags: 0

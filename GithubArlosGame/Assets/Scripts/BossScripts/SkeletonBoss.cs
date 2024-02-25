@@ -44,7 +44,7 @@ public class SkeletonBoss : MonoBehaviour
     Vector2 distanceFromPlayer;
     static public Vector3 projectileRotation;
 
-
+    [SerializeField] int expAmount = 100;
     private Vector2 randomDir;
 
     // Start is called before the first frame update
@@ -252,6 +252,7 @@ public class SkeletonBoss : MonoBehaviour
 
     public void BossDeath()
     {
+        ExperienceManager.Instance.AddExperience(expAmount);
         ArenaManager.enemiesAlive--;
         Debug.Log(ArenaManager.enemiesAlive);
     }
