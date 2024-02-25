@@ -17,7 +17,7 @@ public class SpeedBoostEffect : LevelUpEffect
 
             if (playerController != null)
             {
-                playerController.maxSpeed = playerController.maxSpeed + 5f;
+                playerController.maxSpeed = playerController.maxSpeed + 3f;
 
             }
             else

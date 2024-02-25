@@ -45,6 +45,7 @@ public class playerController : MonoBehaviour
 
     private void Start()
     {
+        OnTakeDamage();
         playerInput = transform.position;
         healthBar.SetMaxHealth(health.maxHealth);
         ExperienceManager.Instance.OnExperienceChange += HandleExperiencChange;
@@ -149,8 +150,8 @@ public class playerController : MonoBehaviour
         Time.timeScale = 0;
         pauseMenu.SetActive(false);
         levelUpMenu.SetActive(true);
-        health.maxHealth += 25;
-        health.currentHealth += 50;
+        health.maxHealth += 20;
+        health.currentHealth += 30;
         maxExperience += 100f;
         healthBar.SetHealth(health.currentHealth);
         OnTakeDamage();
@@ -159,6 +160,5 @@ public class playerController : MonoBehaviour
     public void OnTakeDamage() 
     { 
         healthBar.SetHealth(health.currentHealth);
-
     }
 }
