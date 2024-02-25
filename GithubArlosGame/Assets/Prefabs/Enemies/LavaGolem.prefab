@@ -302,7 +302,7 @@ MonoBehaviour:
   distanceFromPlayer: {x: 0, y: 0, z: 0}
   isAttacking: 0
   cooldown: 0
-  attackDistance: 4
+  attackDistance: 8
   moveSpeed: 2
   player: {fileID: 0}
   expAmount: 125
@@ -573,8 +573,8 @@ MonoBehaviour:
   target: {fileID: 0}
   playerPosition: {x: 0, y: 0}
   enemyAttackOrigin: {fileID: 2399267956746580600}
-  enemyRadius: 1.4
-  enemyDamage: 40
+  enemyRadius: 0
+  enemyDamage: 0
   attackDuration: 1
   attackCooldown: 2
   player: {fileID: 0}

@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35044020c02bb1c4f9c5fbadf4132a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 200
-  maxHealth: 200
+  currentHealth: 300
+  maxHealth: 300
   OnHitWithRefrence:
     m_PersistentCalls:
       m_Calls:

@@ -106,20 +106,12 @@ public class ArenaManager : MonoBehaviour
             {
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
-                Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
-                enemiesAlive++;
-                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
-                enemiesAlive++;
             }
             if (Wave == 13)
             {
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
-                enemiesAlive++;
-                Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
-                enemiesAlive++;
-                Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
             }
             if (Wave == 14)

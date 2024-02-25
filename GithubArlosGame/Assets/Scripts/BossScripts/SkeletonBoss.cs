@@ -67,7 +67,7 @@ public class SkeletonBoss : MonoBehaviour
                 playerPosition = new Vector2(playerTarget.position.x, playerTarget.position.y);
                 distanceFromPlayer = new Vector2(bossPosition.x - playerPosition.x, bossPosition.y - playerPosition.y);
             }
-            if (health.currentHealth <= 100)
+            if (health.currentHealth <= 150)
             {
                 currentPhase = 2;
             }
