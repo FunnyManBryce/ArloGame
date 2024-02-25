@@ -9,7 +9,6 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
-    public TextMeshProUGUI healthText;
 
     public void SetMaxHealth(int health)
     {
@@ -25,4 +24,5 @@ public class HealthBar : MonoBehaviour
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
+
 }

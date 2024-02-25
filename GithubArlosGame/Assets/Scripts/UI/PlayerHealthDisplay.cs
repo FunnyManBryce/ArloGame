@@ -6,8 +6,10 @@ using UnityEngine;
 public class PlayerHealthDisplay : MonoBehaviour
 {
     public TMP_Text playerHealthText;
-
+    public TMP_Text playerXPText;
+    
     public Health playerHealth;
+    public playerController player;
 
     private void Update()
     {
@@ -18,6 +20,7 @@ public class PlayerHealthDisplay : MonoBehaviour
     }
     void UpdateHealthText()
     {
-        playerHealthText.text = "Health:" + playerHealth.currentHealth;
+        playerHealthText.text = "HP:" + playerHealth.currentHealth + "/" + playerHealth.maxHealth;
+        playerXPText.text = "XP:" + player.currentExperience + "/" + player.maxExperience;
     }
 }

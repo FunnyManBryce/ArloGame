@@ -138,8 +138,8 @@ public class playerController : MonoBehaviour
         currentExperience += newExperience;
         if (currentExperience >= maxExperience)
         {
-            LevelUp();
             currentExperience -= maxExperience;
+            LevelUp();
             currentLevel++;
         }
     }
@@ -153,10 +153,12 @@ public class playerController : MonoBehaviour
         health.currentHealth += 50;
         maxExperience += 100f;
         healthBar.SetHealth(health.currentHealth);
+        OnTakeDamage();
     }
 
     public void OnTakeDamage() 
     { 
         healthBar.SetHealth(health.currentHealth);
+
     }
 }
