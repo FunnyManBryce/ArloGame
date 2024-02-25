@@ -67,7 +67,7 @@ public class EnemyMeleeWeapon : MonoBehaviour
         }
     }
 
-    private IEnumerator DelayAttack()
+    public IEnumerator DelayAttack()
     {
         yield return new WaitForSeconds(attackDuration);
         enemyScript.isAttacking = false;
