@@ -11,7 +11,8 @@ public class ArenaManager : MonoBehaviour
     public int[] enemiesPerWave;
     public GameObject[] enemies;
     public GameObject[] spawnPoints;
-    public GameObject boss;
+    public GameObject boss1;
+    public GameObject boss2;
     public GameObject victoryPage;
     bool waveStarted = false;
     bool bossAlive;
@@ -45,12 +46,17 @@ public class ArenaManager : MonoBehaviour
             enemiesToSpawn = enemiesPerWave[Wave];
             waveStarted = true;
             spawnTimer = Random.Range(1, 2);
-            if(Wave == 4)
+            if(Wave == 5)
             {
-                Instantiate(boss, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
             }
-            if(Wave == 5)
+            if(Wave == 15)
+            {
+                Instantiate(boss2, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+                enemiesAlive++;
+            }
+            if(Wave == 16)
             {
                 //go to victory scene
                 victoryPage.SetActive(true);
