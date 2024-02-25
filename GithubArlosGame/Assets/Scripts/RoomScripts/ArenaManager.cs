@@ -9,7 +9,7 @@ public class ArenaManager : MonoBehaviour
     static public int enemiesAlive;
     int enemiesToSpawn;
     public int[] enemiesPerWave;
-    public GameObject[] enemies;
+    public List<GameObject> enemies;
     public GameObject[] spawnPoints;
     public GameObject boss1;
     public GameObject boss2;
@@ -29,7 +29,7 @@ public class ArenaManager : MonoBehaviour
     {
         if (enemiesToSpawn > 0 && spawnTimer <= 0)
         {
-            Instantiate(enemies[Random.Range(0,enemies.Length)], spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
+            Instantiate(enemies[Random.Range(0,enemies.Capacity)], spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
             enemiesToSpawn--;
             enemiesAlive++;
             spawnTimer = Random.Range(1, 3);
