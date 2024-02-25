@@ -283,6 +283,7 @@ MonoBehaviour:
   attack: {fileID: 3893081776771154550, guid: 56d867135bb373747a5c907b1ce9c6ac, type: 3}
   mousePosition: {fileID: -4853190023952275590, guid: 56d867135bb373747a5c907b1ce9c6ac, type: 3}
   dash: {fileID: -8998772995788612356, guid: 56d867135bb373747a5c907b1ce9c6ac, type: 3}
+  WeaponParent: {fileID: 0}
   dashAnimator: {fileID: 0}
 --- !u!95 &3292883008654064437
 Animator:
