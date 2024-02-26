@@ -572,6 +572,7 @@ MonoBehaviour:
   fireballsTillSummon: 2
   maxSummons: 2
   currentSummons: 0
+  Pyromancer: {fileID: 7237991207398816772}
 --- !u!1 &8077793320127356881
 GameObject:
   m_ObjectHideFlags: 0
