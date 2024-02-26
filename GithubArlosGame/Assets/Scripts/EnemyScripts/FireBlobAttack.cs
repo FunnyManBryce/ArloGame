@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireBlobAttack : MonoBehaviour
 {
+    //PyromancerAI pyromancerAI;
     SkeletonBossProjectile skeletonBossProjectile;
     public GameObject fireBlob;
     public GameObject projectile;
@@ -40,19 +41,14 @@ public class FireBlobAttack : MonoBehaviour
         newRotation = Quaternion.Euler(projectileRotation);
         Instantiate(projectile, new Vector3(enemyPosition.position.x - 1, enemyPosition.position.y), newRotation);
     }
-    
-    /*void DeathAttack()
+
+    /*public void SummonDeath()
     {
-        Debug.Log("it works");
-        skeletonBossProjectile.projectileNumber = 1;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x, enemyPosition.position.y + 0.75f), Quaternion.identity);
-        skeletonBossProjectile.projectileNumber = 2;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x, enemyPosition.position.y - 0.5f), Quaternion.identity);
-        skeletonBossProjectile.projectileNumber = 3;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x + 1, enemyPosition.position.y - 0.25f), Quaternion.identity);
-        skeletonBossProjectile.projectileNumber = 4;
-        Instantiate(projectile, new Vector3(enemyPosition.position.x - 1, enemyPosition.position.y - 0.25f), Quaternion.identity);
+        lavaBoss = GameObject.Find("Gerald").GetComponent<LavaBoss>();
+        lavaBoss.currentSummons--;
     }*/
+
+    
 
     private void OnCollisionStay2D(Collision2D col)
     {

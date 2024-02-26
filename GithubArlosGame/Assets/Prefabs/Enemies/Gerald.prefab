@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 7027126440347779217}
   - component: {fileID: 1791682153283812608}
   - component: {fileID: 3803852785588679712}
-  m_Layer: 0
+  - component: {fileID: 4034829945985944124}
+  - component: {fileID: 7147775060502664568}
+  m_Layer: 8
   m_Name: Gerald
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +36,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6372878117029421633}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1474091635083718239
@@ -102,15 +105,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTeleporting: 0
+  onCooldown: 0
+  attackPhase: 0
   isAttacking: 0
   isSpawning: 0
-  Fireball: {fileID: 1438435654808208330, guid: 09b1e07124541db42b185231437a7361, type: 3}
-  Wave: {fileID: 732376385253157997, guid: ff1bd0f3344b78c458ba5b6d067f9e67, type: 3}
+  health: {fileID: 7147775060502664568}
   Pyromancer: {fileID: 7237991207398816772, guid: c5510d3388f21f047a29f6cdf7159f37, type: 3}
   Player: {fileID: 0}
   Gerald: {fileID: 446608834040801963}
-  bossPosition: {fileID: 539459609169365612}
-  playerPosition: {fileID: 0}
+  projectileTracking: {fileID: 3565352301239007653}
+  possibleAttacks:
+  - {fileID: 732376385253157997, guid: ff1bd0f3344b78c458ba5b6d067f9e67, type: 3}
+  - {fileID: 1438435654808208330, guid: 09b1e07124541db42b185231437a7361, type: 3}
+  - {fileID: 1438435654808208330, guid: 09b1e07124541db42b185231437a7361, type: 3}
+  - {fileID: 1438435654808208330, guid: 09b1e07124541db42b185231437a7361, type: 3}
+  bossTarget: {fileID: 539459609169365612}
+  playerTarget: {fileID: 0}
   teleportLocations:
   - {x: 0, y: 5.5, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -122,6 +132,14 @@ MonoBehaviour:
   - {x: -6.75, y: 0, z: 0}
   - {x: -6.75, y: -5.5, z: 0}
   animator: {fileID: 5771180014432365136}
+  maxAttacks: 5
+  currentAttacks: 0
+  maxTeleports: 5
+  currentTeleports: 0
+  maxSummons: 2
+  currentSummons: 0
+  attackDelay: 0.25
+  currentAttackDelay: 0
 --- !u!95 &5771180014432365136
 Animator:
   serializedVersion: 5
@@ -271,4 +289,104 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &4034829945985944124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446608834040801963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47816ffc5d44407489cb3d3594faf0e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterRenderer: {fileID: 1474091635083718239}
+  blinkDuration: 0.1
+  blinkColor: {r: 1, g: 0.35283017, b: 0.35283017, a: 1}
+  blinkCount: 1
+--- !u!114 &7147775060502664568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446608834040801963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35044020c02bb1c4f9c5fbadf4132a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 300
+  maxHealth: 300
+  OnHitWithRefrence:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4034829945985944124}
+        m_TargetAssemblyTypeName: PlayerBlinkFeedback, Assembly-CSharp
+        m_MethodName: PlayBlinkFeedback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeathWithRefrence:
+    m_PersistentCalls:
+      m_Calls: []
+  isDead: 0
+  isInvincible: 0
+  invincibilityDuration: 0
+  invincibilityFeedback: {fileID: 0}
+  player: {fileID: 0}
+--- !u!1 &3565352301239007653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6372878117029421633}
+  - component: {fileID: 7848474952432076518}
+  m_Layer: 8
+  m_Name: ProjectileTracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6372878117029421633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565352301239007653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 539459609169365612}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7848474952432076518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565352301239007653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc66bc029a4ffee458dc50038cbe3ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  playerPosition: {x: 0, y: 0}
+  player: {fileID: 0}

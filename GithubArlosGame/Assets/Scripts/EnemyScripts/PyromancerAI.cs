@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PyromancerAI : Enemy
 {
+    LavaBoss lavaBoss;
     public bool isRunning;
     public bool isSummoning;
     public float runDistance;
@@ -65,4 +66,9 @@ public class PyromancerAI : Enemy
         }
     }
 
+    public void SummonDeath()
+    {
+        lavaBoss = GameObject.Find("Gerald").GetComponent<LavaBoss>();
+        lavaBoss.currentSummons--;
+    }
 }
