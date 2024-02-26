@@ -3622,12 +3622,12 @@ MonoBehaviour:
   - {fileID: 1441001590}
   - {fileID: 973380521}
   - {fileID: 105649723}
-  Skeleton: {fileID: 0}
-  FireBlob: {fileID: 0}
-  Pyromancer: {fileID: 0}
-  lavaGolem: {fileID: 0}
+  Skeleton: {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}
+  FireBlob: {fileID: 7237991207398816772, guid: 6f4d1aaab19bcb048ad3152bd4cc5b11, type: 3}
+  Pyromancer: {fileID: 7237991207398816772, guid: e38938a71e84abe4aa1dd5c260cabb1c, type: 3}
+  lavaGolem: {fileID: 7237991207398816772, guid: 132bf370f05624e4295ca3880159bf15, type: 3}
   boss1: {fileID: 7364709920442944923, guid: 574b99a115ab56e418f1e7cb32b5d49d, type: 3}
-  boss2: {fileID: 0}
+  boss2: {fileID: 446608834040801963, guid: 8d7c5e25c9f7b8940a17f5fb8263a0f7, type: 3}
   victoryPage: {fileID: 938028624}
 --- !u!4 &1214718291
 Transform:

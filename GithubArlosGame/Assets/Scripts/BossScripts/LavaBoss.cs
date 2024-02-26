@@ -65,18 +65,18 @@ public class LavaBoss : MonoBehaviour
                 isAttacking = true;
             }
         }
-        /*if (health.currentHealth <= 200 && health.currentHealth > 100)
+        if (health.currentHealth <= 200 && health.currentHealth > 100)
         {
             maxAttacks = 7;
             maxTeleports = 6;
-            attackDelay = 0.2f;
+            //attackDelay = 0.2f;
         }
         if (health.currentHealth <= 100)
         {
             maxAttacks = 10;
             maxTeleports = 7;
-            attackDelay = 0.1f;
-        }*/
+            //attackDelay = 0.1f;
+        }
     }
     
     public void Teleport()
