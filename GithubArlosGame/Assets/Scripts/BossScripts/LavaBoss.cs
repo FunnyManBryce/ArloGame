@@ -12,6 +12,7 @@ public class LavaBoss : MonoBehaviour
     public GameObject Wave;
     public GameObject Pyromancer;
     public GameObject Player;
+    public GameObject Gerald;
 
     public Transform bossPosition;
     public Transform playerPosition;
@@ -28,12 +29,12 @@ public class LavaBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        animator.SetBool("Teleporting", isTeleporting);
     }
     
     public void Teleport()
     {
-
+        Gerald.transform.position = teleportLocations[Random.Range(0, teleportLocations.Length)];
     }
 
     public void Attack()
