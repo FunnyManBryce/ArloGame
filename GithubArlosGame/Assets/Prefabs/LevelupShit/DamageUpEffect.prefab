@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0891a6f2164cfb4f8da0ad15fd1e27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonColor: {r: 0, g: 0, b: 0, a: 0}
   buttonText: Damage Up
   buttonIcon: {fileID: 0}
   Player: {fileID: 0}
