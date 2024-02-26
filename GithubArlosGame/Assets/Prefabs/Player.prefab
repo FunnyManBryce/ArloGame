@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 7172060563188714282}
   - component: {fileID: 1359200291390473696}
   - component: {fileID: 3292883008654064437}
+  - component: {fileID: 8262285895567103510}
   - component: {fileID: 7860652255683599203}
   - component: {fileID: 3986512596438471315}
   m_Layer: 6
@@ -195,8 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35044020c02bb1c4f9c5fbadf4132a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 1000
-  maxHealth: 1000
+  currentHealth: 100
+  maxHealth: 100
   OnHitWithRefrence:
     m_PersistentCalls:
       m_Calls:
@@ -243,7 +244,7 @@ MonoBehaviour:
   dashLength: 0.2
   dashCooldown: 1
   isDashing: 0
-  currentExperience: 200
+  currentExperience: 0
   maxExperience: 300
   currentLevel: 1
   health: {fileID: 6613822001154775121}
@@ -264,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 5906694651761291528}
   blinkDuration: 0.5
-  blinkColor: {r: 1, g: 1, b: 1, a: 0.15686275}
+  blinkColor: {r: 1, g: 0.47547168, b: 0.47547168, a: 0.15686275}
   blinkCount: 4
 --- !u!114 &1359200291390473696
 MonoBehaviour:
@@ -306,6 +307,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8262285895567103510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907792579629526303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e7e0177b4e72241b9e134e57deb951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthText: {fileID: 0}
+  playerXPText: {fileID: 0}
+  playerHealth: {fileID: 6613822001154775121}
+  player: {fileID: 2384011829972160131}
 --- !u!61 &7860652255683599203
 BoxCollider2D:
   m_ObjectHideFlags: 0

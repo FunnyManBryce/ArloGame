@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
   m_PrefabInstance: {fileID: 2064257085}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317887959}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35044020c02bb1c4f9c5fbadf4132a85, type: 3}
@@ -969,7 +969,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8531136bd2b32864591df386203277bd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1430,6 +1430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636123733}
   - component: {fileID: 636123734}
+  - component: {fileID: 636123735}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -1485,6 +1486,20 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     source: {fileID: 0}
+--- !u!114 &636123735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636123732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc168975ed56734b973e391bc94cb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 31484740}
+  audioSource: {fileID: 486501798}
 --- !u!1 &660782554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,8 +1630,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 958390131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3200,7 +3215,7 @@ MonoBehaviour:
   m_text: EXIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd8f238ab5bcb4376818725248fd2746, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4837476437581418639, guid: dd8f238ab5bcb4376818725248fd2746, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3224,10 +3239,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 18.9
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -3263,7 +3278,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1173051755
@@ -3710,7 +3725,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
   m_PrefabInstance: {fileID: 2064257085}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317887959}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 163a94817b6994e40a5450b1b9763a17, type: 3}
@@ -4136,27 +4151,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297335423}
   m_CullTransparentMesh: 1
---- !u!1 &1317887959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 907792579629526303, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
-  m_PrefabInstance: {fileID: 2064257085}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1317887968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317887959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e7e0177b4e72241b9e134e57deb951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealthText: {fileID: 1145674388}
-  playerXPText: {fileID: 1482043890}
-  playerHealth: {fileID: 417085024}
-  player: {fileID: 1232598648}
 --- !u!1 &1383694364
 GameObject:
   m_ObjectHideFlags: 0
@@ -6182,7 +6176,7 @@ RectTransform:
   m_Father: {fileID: 660782555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7241,10 +7235,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
-      propertyPath: maxSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1918121288}
@@ -7256,29 +7246,18 @@ PrefabInstance:
       propertyPath: levelUpMenu
       value: 
       objectReference: {fileID: 1273716606}
-    - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
-      propertyPath: maxExperience
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
-      propertyPath: currentExperience
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
-      propertyPath: currentHealth
-      value: 100
-      objectReference: {fileID: 0}
+    - target: {fileID: 8262285895567103510, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: playerXPText
+      value: 
+      objectReference: {fileID: 1482043890}
+    - target: {fileID: 8262285895567103510, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: playerHealthText
+      value: 
+      objectReference: {fileID: 1145674388}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 907792579629526303, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
-      insertIndex: 8
-      addedObject: {fileID: 1317887968}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
 --- !u!1 &2066606442
 GameObject:
