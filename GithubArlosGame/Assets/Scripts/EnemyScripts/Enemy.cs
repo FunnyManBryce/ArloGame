@@ -53,6 +53,7 @@ public class Enemy : MonoBehaviour
                 //Debug.Log("Attacking");
                 agent.speed = 0;
                 isAttacking = true;
+
             }
         }
     }
