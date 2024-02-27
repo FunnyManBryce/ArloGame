@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] private bool isDead = false;
     public bool isInvincible = false;
-    [SerializeField] private float invincibilityDuration = 1.5f;
+    public float invincibilityDuration = 1.5f;
 
     [SerializeField] private PlayerBlinkFeedback invincibilityFeedback;
 

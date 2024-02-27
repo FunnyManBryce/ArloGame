@@ -3611,7 +3611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stage: 0
-  Wave: 13
+  Wave: 0
   realWaveNumber: 1
   enemiesPerWave: 01000000020000000300000004000000000000000400000004000000050000000500000006000000060000000600000006000000010000000000000000000000
   enemies:
@@ -3795,6 +3795,7 @@ MonoBehaviour:
   - {fileID: -3637319336589809177, guid: d73fda1ea5f78294b94c999e053af373, type: 3}
   - {fileID: 7226736521082020306, guid: 63cd5fef65bfa8a4596cd2604464fb30, type: 3}
   - {fileID: -729270633184049705, guid: 3e7fd2205fc2ec14aa297dbe15e0cd20, type: 3}
+  - {fileID: -8483749595117191570, guid: 1342c3f547a1c4340883fed9d8a8f0da, type: 3}
   buttons:
   - {fileID: 442762470}
   - {fileID: 92687852}
@@ -6892,7 +6893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -77, y: -74}
+  m_AnchoredPosition: {x: -269.69, y: -60.008}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868343516
@@ -7405,6 +7406,18 @@ PrefabInstance:
       propertyPath: levelUpMenu
       value: 
       objectReference: {fileID: 1273716606}
+    - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: maxExperience
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: currentExperience
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613822001154775121, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: invincibilityDuration
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8262285895567103510, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
       propertyPath: playerXPText
       value: 
