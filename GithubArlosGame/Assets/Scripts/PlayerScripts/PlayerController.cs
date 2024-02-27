@@ -151,7 +151,7 @@ public class playerController : MonoBehaviour
         pauseMenu.SetActive(false);
         levelUpMenu.SetActive(true);
         health.maxHealth += 20;
-        health.currentHealth += 50;
+        health.currentHealth += 70;
         if (health.currentHealth > health.maxHealth)
         {
             health.currentHealth = health.maxHealth;
