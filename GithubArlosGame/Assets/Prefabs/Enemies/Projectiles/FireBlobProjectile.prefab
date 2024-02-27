@@ -103,7 +103,6 @@ MonoBehaviour:
   travelSpeed: 5
   lifespan: 2
   projectileTrajectory: {x: 0, y: 0}
-  projectileNumber: 4
   damage: 30
 --- !u!58 &3417749464692449013
 CircleCollider2D:
