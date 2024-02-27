@@ -56,6 +56,7 @@ public class ArenaManager : MonoBehaviour
             {
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
+                //play song here
             }
             if(Wave == 5)
             {
