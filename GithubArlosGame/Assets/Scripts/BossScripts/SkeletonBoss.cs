@@ -23,7 +23,7 @@ public class SkeletonBoss : MonoBehaviour
     public float moveSpeed = 5;
     public float ramSpeed = 0.1f;
     float currentStunLength = 3f;
-    public float totalStunLength = 3f;
+    public float totalStunLength;
 
     public Transform bossTarget;
     public Transform playerTarget;

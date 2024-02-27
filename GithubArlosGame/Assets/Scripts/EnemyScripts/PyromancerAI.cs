@@ -69,9 +69,9 @@ public class PyromancerAI : Enemy
 
     public void SummonDeath()
     {
+        ArenaManager.enemiesAlive--;
         Destroy(Pyromancer);
         lavaBoss = GameObject.Find("Gerald(Clone)").GetComponent<LavaBoss>();
         lavaBoss.currentSummons--;
-        Debug.Log("pyromancer no more");
     }
 }

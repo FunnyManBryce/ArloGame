@@ -6,6 +6,7 @@ public class ArenaManager : MonoBehaviour
 {
     public int Stage;
     public int Wave;
+    public int realWaveNumber;
     static public int enemiesAlive;
     int enemiesToSpawn;
     public int[] enemiesPerWave;
@@ -46,6 +47,7 @@ public class ArenaManager : MonoBehaviour
         if(waveStarted == true && enemiesAlive == 0 && enemiesToSpawn == 0)
         {
             Wave++;
+            realWaveNumber++;
             //Debug.Log("Wave Number: " + Wave);
             enemiesToSpawn = enemiesPerWave[Wave];
             waveStarted = true;
