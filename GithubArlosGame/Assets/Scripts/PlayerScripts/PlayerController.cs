@@ -151,19 +151,18 @@ public class playerController : MonoBehaviour
         pauseMenu.SetActive(false);
         levelUpMenu.SetActive(true);
         health.maxHealth += 20;
-        health.currentHealth += 100;
+        health.currentHealth += 50;
         if (health.currentHealth > health.maxHealth)
         {
             health.currentHealth = health.maxHealth;
         }
         maxExperience += 100f;
-        healthBar.SetHealth(health.currentHealth);
-        healthBar.SetMaxHealth(health.currentHealth);
         OnTakeDamage();
     }
 
     public void OnTakeDamage() 
-    { 
+    {
+        healthBar.SetMaxHealth(health.maxHealth);
         healthBar.SetHealth(health.currentHealth);
     }
 }
