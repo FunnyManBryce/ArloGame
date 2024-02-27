@@ -33,6 +33,17 @@ public class Weapon : MonoBehaviour
         StartCoroutine(DelayedDetection());
     }
 
+    public void ChangeScale(float scaleAmount)
+    {
+        transform.localScale += new Vector3(scaleAmount, scaleAmount, scaleAmount);
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Vector3 position = attackOrigin == null ? Vector3.zero : attackOrigin.position;
+        Gizmos.DrawWireSphere(position, radius);
+    }
+
     private IEnumerator DelayedDetection()
     {
         yield return new WaitForSeconds(detectionDelay);

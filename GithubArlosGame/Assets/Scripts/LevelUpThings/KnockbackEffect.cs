@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageUpEffect : LevelUpEffect
+public class KnockbackEffect : LevelUpEffect
 {
     public player Player;
 
@@ -18,8 +18,8 @@ public class DamageUpEffect : LevelUpEffect
 
             if (Player != null)
             {
-                Player.WeaponParent.weapons[0].damage = Player.WeaponParent.weapons[0].damage + 5;
-                Player.WeaponParent.weapons[1].damage = Player.WeaponParent.weapons[1].damage + 10;
+                Player.WeaponParent.weapons[0].knockbackMultiplier = Player.WeaponParent.weapons[0].knockbackMultiplier + 0.5f;
+                Player.WeaponParent.weapons[1].knockbackMultiplier = Player.WeaponParent.weapons[1].knockbackMultiplier + 1;
             }
             else
             {

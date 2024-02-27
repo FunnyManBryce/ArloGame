@@ -3787,9 +3787,13 @@ MonoBehaviour:
   restartScene: StageOne
   mainMenuScene: MainMenu
   levelUpEffects:
-  - {fileID: 2731224417057386051, guid: 37ed14d9f284fef419b85066f1d10420, type: 3}
+  - {fileID: 778950609421328850, guid: e616bc7891b14404ea4a31aaf10a30be, type: 3}
   - {fileID: 9041086563040288371, guid: 0782a018db111414b9291d43b5318ee9, type: 3}
+  - {fileID: 2731224417057386051, guid: 37ed14d9f284fef419b85066f1d10420, type: 3}
+  - {fileID: 7201652458538648386, guid: bd5849c8302097a4b85d333a38331111, type: 3}
   - {fileID: -3637319336589809177, guid: d73fda1ea5f78294b94c999e053af373, type: 3}
+  - {fileID: 7226736521082020306, guid: 63cd5fef65bfa8a4596cd2604464fb30, type: 3}
+  - {fileID: -729270633184049705, guid: 3e7fd2205fc2ec14aa297dbe15e0cd20, type: 3}
   buttons:
   - {fileID: 442762470}
   - {fileID: 92687852}
@@ -7233,6 +7237,10 @@ PrefabInstance:
     - target: {fileID: 2246322276882461715, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: dashSpeed
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
       propertyPath: healthBar

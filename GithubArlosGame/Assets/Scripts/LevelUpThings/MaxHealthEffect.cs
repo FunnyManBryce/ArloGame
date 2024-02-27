@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageUpEffect : LevelUpEffect
+public class MaxHealEffect : LevelUpEffect
 {
-    public player Player;
+    public playerController playerController;
 
     public override void ApplyEffect()
     {
@@ -13,13 +13,13 @@ public class DamageUpEffect : LevelUpEffect
 
         if (player != null)
         {
-            //refrence the player not player controller
-            Player = player.GetComponent<player>();
+            playerController = player.GetComponent<playerController>();
 
-            if (Player != null)
+            if (playerController != null)
             {
-                Player.WeaponParent.weapons[0].damage = Player.WeaponParent.weapons[0].damage + 5;
-                Player.WeaponParent.weapons[1].damage = Player.WeaponParent.weapons[1].damage + 10;
+                playerController.health.maxHealth = playerController.health.maxHealth + 80;
+                playerController.health.currentHealth = playerController.health.currentHealth + 80;
+                playerController.OnTakeDamage();
             }
             else
             {

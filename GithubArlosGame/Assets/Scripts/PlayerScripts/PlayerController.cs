@@ -13,7 +13,7 @@ public class playerController : MonoBehaviour
     public float maxSpeed = 2, acceleration = 50, deacceleration = 100;
     [SerializeField] 
     private float currentSpeed = 0;
-    public float dashSpeed;
+    public float dashSpeed = 30f;
     public bool canDash = true;
 
     public float dashLength = 0.5f, dashCooldown = 1f;
@@ -151,9 +151,14 @@ public class playerController : MonoBehaviour
         pauseMenu.SetActive(false);
         levelUpMenu.SetActive(true);
         health.maxHealth += 20;
-        health.currentHealth += 30;
+        health.currentHealth += 100;
+        if (health.currentHealth > health.maxHealth)
+        {
+            health.currentHealth = health.maxHealth;
+        }
         maxExperience += 100f;
         healthBar.SetHealth(health.currentHealth);
+        healthBar.SetMaxHealth(health.currentHealth);
         OnTakeDamage();
     }
 
