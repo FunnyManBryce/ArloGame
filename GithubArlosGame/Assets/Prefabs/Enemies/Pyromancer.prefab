@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abfe065ce69dfc49ae32bea84bb7881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToSpawn: {fileID: 1890700133121522558, guid: cdff825f99a0bdd4cb66a8d7ed2bb2b5, type: 3}
+  gameObjectToSpawn: {fileID: 1890700133121522558, guid: a46344c7ec3fd294ebcf5bf5dfc8fca4, type: 3}
 --- !u!50 &4372065627759552304
 Rigidbody2D:
   serializedVersion: 4
@@ -540,6 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6069025c923f264448e7135246216018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Creator: {fileID: 0}
   target: {fileID: 0}
   enemyTarget: {fileID: 4838719328554928952}
   agent: {fileID: 0}
@@ -553,12 +554,13 @@ MonoBehaviour:
   attackDistance: 8
   moveSpeed: 2
   player: {fileID: 0}
+  enemy: {fileID: 0}
   expAmount: 75
   isRunning: 0
   isSummoning: 0
   runDistance: 6
   fireballsTillSummon: 2
-  maxSummons: 3
+  maxSummons: 2
   currentSummons: 0
   Pyromancer: {fileID: 0}
 --- !u!1 &8077793320127356881
@@ -622,4 +624,5 @@ MonoBehaviour:
   weaponParent: {fileID: 8077793320127356881}
   fireBlob: {fileID: 7237991207398816772, guid: 6bf08a37aa3eac54a88f2fd2fa1cbaaa, type: 3}
   Object: {fileID: 4425562221351594760}
+  pyro: {fileID: 7237991207398816772}
   spawnPoint: {fileID: 3242877364191597674}

@@ -9,6 +9,7 @@ public class PyroAttacks : EnemyMeleeWeapon
     public GameObject weaponParent;
     public GameObject fireBlob;
     public GameObject Object;
+    public GameObject pyro;
     public Transform spawnPoint;
     //public Shockwave shockwaveScript;
     // Start is called before the first frame update
@@ -46,7 +47,8 @@ public class PyroAttacks : EnemyMeleeWeapon
     public void Summon()
     {
         spawnPoint = Object.GetComponent<Transform>();
-        Instantiate(fireBlob, new Vector3(spawnPoint.position.x, spawnPoint.position.y), Quaternion.identity);
+        GameObject fireBlob1 = Instantiate(fireBlob, new Vector3(spawnPoint.position.x, spawnPoint.position.y), Quaternion.identity);
+        fireBlob1.GetComponent<Enemy>().Creator = pyro;
         ArenaManager.enemiesAlive++;
         pyromancerScript.isSummoning = false;
         StartCoroutine(DelayAttack());

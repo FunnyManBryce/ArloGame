@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11a1b212eff8f6418f661ec0fe0d63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Creator: {fileID: 0}
   target: {fileID: 0}
   enemyTarget: {fileID: 4838719328554928952}
   agent: {fileID: 0}
@@ -89,6 +90,7 @@ MonoBehaviour:
   attackDistance: 0
   moveSpeed: 5
   player: {fileID: 0}
+  enemy: {fileID: 7237991207398816772}
   expAmount: 25
 --- !u!114 &2705977029009518425
 MonoBehaviour:
@@ -386,3 +388,4 @@ MonoBehaviour:
   projectile: {fileID: 1438435654808208330, guid: 748e1b3608bbb7048b7f660a233645a7, type: 3}
   enemyPosition: {fileID: 4838719328554928952}
   damage: 20
+  SpawnCooldown: 1

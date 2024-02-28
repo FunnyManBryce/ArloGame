@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abfe065ce69dfc49ae32bea84bb7881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToSpawn: {fileID: 1890700133121522558, guid: e9f44c4f92a6ef7418e9f93b082ef954, type: 3}
+  gameObjectToSpawn: {fileID: 1890700133121522558, guid: 5e3ce4361ccb3f3469972b7e867d3af4, type: 3}
 --- !u!50 &4372065627759552304
 Rigidbody2D:
   serializedVersion: 4

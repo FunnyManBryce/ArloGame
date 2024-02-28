@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject Creator;
     public Transform target;
     public Transform enemyTarget;
     public NavMeshAgent agent;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     public float attackDistance = 2;
     public float moveSpeed = 3;
     public GameObject player;
+    public GameObject enemy;
 
     [SerializeField] int expAmount = 100;
 
@@ -65,6 +67,22 @@ public class Enemy : MonoBehaviour
         ArenaManager.enemiesAlive--;
     }
 
+    public void SkeletonSummonDeath()
+    {
+        ArenaManager.enemiesAlive--;
+        Destroy(enemy);
+        Creator.GetComponent<SkeletonBoss>().currentSummons--;
+    }
+
+    public void FireBlobSummonDeath()
+    {
+        //FireBlobAttack fireBlobAttack = enemy.GetComponent<FireBlobAttack>();
+        //fireBlobAttack.Death();
+        ArenaManager.enemiesAlive--;
+        Destroy(enemy);  //causes a really minor bug that won't exist if we remove the bug of enemies not getting cleaved properly
+        Creator.GetComponent<PyromancerAI>().currentSummons--;
+    }
+    
     public IEnumerator SpawnCooldown()
     {
         cooldown = true;

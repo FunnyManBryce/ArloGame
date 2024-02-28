@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class SkeletonBoss : MonoBehaviour
 {
+    public Animator animator;
+
     public GameObject player;
     public GameObject projectile;
     public GameObject boss;
@@ -15,6 +17,8 @@ public class SkeletonBoss : MonoBehaviour
     public int shotsFiredPerPhase = 4;
     int currentShotsFired = 0;
     int currentPhase = 1;
+    public int maxSummons;
+    public int currentSummons;
 
     float currentTimeBetweenShots;
     public float maxTimeBetweenShots = 3;
@@ -38,6 +42,7 @@ public class SkeletonBoss : MonoBehaviour
     bool doneFiring = false;
     bool summoning = true;
     bool stunned = false;
+    public bool AttackAnimation;
 
     Vector2 bossPosition;
     Vector2 playerPosition;
@@ -54,11 +59,15 @@ public class SkeletonBoss : MonoBehaviour
         playerTarget = player.transform;
         skeletonBossProjectile = projectile.GetComponent<SkeletonBossProjectile>();
         bossStarted = true;
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
+        animator.SetBool("Firing", AttackAnimation);
+        animator.SetBool("Stunned", stunned);
+        animator.SetBool("Charging", ramming);
         if (player != null)
         {
             if (ramming == false)
@@ -94,13 +103,16 @@ public class SkeletonBoss : MonoBehaviour
                 }
                 if (shooting == true)
                 {
+                    AttackAnimation = true;
                     if (attackDelay > 0.25)
                     {
+                        
                         moveSpeed = 0f;
                         attackDelay -= Time.deltaTime;
                     }
                     else if (attackDelay > 0)
                     {
+
                         if (doneFiring == false)
                         {
                             Debug.Log("firing");
@@ -137,6 +149,7 @@ public class SkeletonBoss : MonoBehaviour
                     }
                     else if (attackDelay < 0)
                     {
+                        AttackAnimation = false;
                         shooting = false;
                         attackDelay = attackDelayStart;
                         currentTimeBetweenShots = maxTimeBetweenShots;
@@ -185,13 +198,21 @@ public class SkeletonBoss : MonoBehaviour
                     {
                         if (doneFiring == false)
                         {
-                            Instantiate(summon, new Vector3(summonPositionOne.position.x, summonPositionOne.position.y), Quaternion.identity);
-                            ArenaManager.enemiesAlive++;
-                            if (currentPhase == 2)
+                            if(currentSummons < maxSummons)
                             {
-                                Instantiate(summon, new Vector3(summonPositionTwo.position.x, summonPositionTwo.position.y), Quaternion.identity);
+                                GameObject skeleton1 = Instantiate(summon, new Vector3(summonPositionOne.position.x, summonPositionOne.position.y), Quaternion.identity);
+                                skeleton1.GetComponent<Enemy>().Creator = boss;
                                 ArenaManager.enemiesAlive++;
+                                currentSummons++;
+                                if (currentPhase == 2 && currentSummons < 4)
+                                {
+                                    GameObject skeleton2 = Instantiate(summon, new Vector3(summonPositionTwo.position.x, summonPositionTwo.position.y), Quaternion.identity);
+                                    skeleton2.GetComponent<Enemy>().Creator = boss;
+                                    ArenaManager.enemiesAlive++;
+                                    currentSummons++;
+                                }
                             }
+                            
                             doneFiring = true;
                         }
                         attackDelay -= Time.deltaTime;

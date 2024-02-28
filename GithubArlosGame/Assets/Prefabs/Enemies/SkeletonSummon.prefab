@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11a1b212eff8f6418f661ec0fe0d63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Creator: {fileID: 0}
   target: {fileID: 0}
   enemyTarget: {fileID: 4838719328554928952}
   agent: {fileID: 0}
@@ -293,6 +294,7 @@ MonoBehaviour:
   attackDistance: 2
   moveSpeed: 3
   player: {fileID: 0}
+  enemy: {fileID: 7237991207398816772}
   expAmount: 0
 --- !u!114 &2705977029009518425
 MonoBehaviour:
@@ -354,9 +356,9 @@ MonoBehaviour:
   OnDeathWithRefrence:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2803945144463659862}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: EnemyDeath
+      - m_Target: {fileID: 2014979974293083369}
+        m_TargetAssemblyTypeName: DeathAnimationFeedback, Assembly-CSharp
+        m_MethodName: PlayFeedback
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -366,9 +368,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2014979974293083369}
-        m_TargetAssemblyTypeName: DeathAnimationFeedback, Assembly-CSharp
-        m_MethodName: PlayFeedback
+      - m_Target: {fileID: 2803945144463659862}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: SkeletonSummonDeath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

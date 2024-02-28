@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 3292359088943044420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.179, y: 0, z: 0}
+  m_LocalPosition: {x: 0.19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 8236505457849073057}
   - component: {fileID: 7384669807664534565}
   - component: {fileID: 3418213163636828037}
+  - component: {fileID: 4182279063713023230}
   m_Layer: 8
   m_Name: Skellyton
   m_TagString: Untagged
@@ -144,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f0e54c11d3f38db4bbd936d2c283a8ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa7b5a0dd8b95364d9f95ebf8ee09781, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -253,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efebc4b4e1a34041ba61a55229834fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4182279063713023230}
   player: {fileID: 0}
   projectile: {fileID: 1438435654808208330, guid: 2d728e5933df12c44bb0d4c320f6f04d, type: 3}
   boss: {fileID: 7364709920442944923}
@@ -261,6 +263,7 @@ MonoBehaviour:
   health: {fileID: 1592640175677549316}
   damage: 15
   shotsFiredPerPhase: 5
+  maxSummons: 4
   maxTimeBetweenShots: 1
   attackDelayStart: 0.5
   moveSpeed: 5
@@ -270,6 +273,7 @@ MonoBehaviour:
   playerTarget: {fileID: 0}
   summonPositionOne: {fileID: 8320848553850917319}
   summonPositionTwo: {fileID: 6024907119843935094}
+  AttackAnimation: 0
   expAmount: 200
 --- !u!61 &4894214719209350057
 BoxCollider2D:
@@ -303,7 +307,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004985854, y: 0.043875456}
+  m_Offset: {x: -0.004985854, y: 0.010288775}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -314,7 +318,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25418678, y: 0.19236231}
+  m_Size: {x: 0.25418678, y: 0.17892763}
   m_EdgeRadius: 0
 --- !u!50 &8236505457849073057
 Rigidbody2D:
@@ -380,3 +384,24 @@ MonoBehaviour:
   OnDone:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &4182279063713023230
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364709920442944923}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f500d88eb9f1344ab5eeb234049598b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
