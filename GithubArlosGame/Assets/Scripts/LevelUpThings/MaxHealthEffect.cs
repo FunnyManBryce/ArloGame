@@ -17,8 +17,8 @@ public class MaxHealEffect : LevelUpEffect
 
             if (playerController != null)
             {
-                playerController.health.maxHealth = playerController.health.maxHealth + 80;
-                playerController.health.currentHealth = playerController.health.currentHealth + 80;
+                playerController.health.maxHealth = playerController.health.maxHealth + 55;
+                playerController.health.currentHealth = playerController.health.currentHealth + 5;
                 playerController.OnTakeDamage();
             }
             else
