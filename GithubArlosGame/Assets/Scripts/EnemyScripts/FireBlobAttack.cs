@@ -11,12 +11,13 @@ public class FireBlobAttack : MonoBehaviour
     public Transform enemyPosition;
     public int damage;
     static public Vector3 projectileRotation;
+    public bool SpawnCooldown = true;
     //public float attackDelay = 0.01f;
     // Start is called before the first frame update
     void Start()
     {
         skeletonBossProjectile = projectile.GetComponent<SkeletonBossProjectile>();
-
+        StartCoroutine(SpawnDelay());
     }
 
     // Update is called once per frame
@@ -53,11 +54,17 @@ public class FireBlobAttack : MonoBehaviour
     private void OnCollisionStay2D(Collision2D col)
     {
      
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && SpawnCooldown == false)
         {
             Health health;
             health = col.gameObject.GetComponent<Health>();
             health.GetHit(damage, fireBlob);
         }
+    }
+
+    public IEnumerator SpawnDelay()
+    {
+        yield return new WaitForSeconds(0.75f);
+        SpawnCooldown = false;
     }
 }

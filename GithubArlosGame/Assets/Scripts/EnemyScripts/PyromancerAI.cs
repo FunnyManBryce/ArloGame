@@ -21,6 +21,7 @@ public class PyromancerAI : Enemy
         agent.speed = 0;
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
+        StartCoroutine(SpawnCooldown());
     }
 
     // Update is called once per frame
@@ -74,4 +75,5 @@ public class PyromancerAI : Enemy
         lavaBoss = GameObject.Find("Gerald(Clone)").GetComponent<LavaBoss>();
         lavaBoss.currentSummons--;
     }
+    
 }

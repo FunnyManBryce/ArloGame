@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
         agent.speed = 0;
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
+        StartCoroutine(SpawnCooldown());
     }
 
    
@@ -62,5 +63,12 @@ public class Enemy : MonoBehaviour
     {
         ExperienceManager.Instance.AddExperience(expAmount);
         ArenaManager.enemiesAlive--;
+    }
+
+    public IEnumerator SpawnCooldown()
+    {
+        cooldown = true;
+        yield return new WaitForSeconds(0.5f);
+        cooldown = false;
     }
 }

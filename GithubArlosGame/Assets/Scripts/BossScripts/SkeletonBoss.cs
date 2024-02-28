@@ -256,4 +256,6 @@ public class SkeletonBoss : MonoBehaviour
         ArenaManager.enemiesAlive--;
         Debug.Log(ArenaManager.enemiesAlive);
     }
+
+    
 }
