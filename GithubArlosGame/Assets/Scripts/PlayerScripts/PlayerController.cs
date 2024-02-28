@@ -156,7 +156,7 @@ public class playerController : MonoBehaviour
         {
             health.currentHealth = health.maxHealth;
         }
-        maxExperience += 100f;
+        maxExperience += 75;
         OnTakeDamage();
     }
 

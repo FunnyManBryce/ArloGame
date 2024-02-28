@@ -44,28 +44,41 @@ public class Weapon : MonoBehaviour
         Gizmos.DrawWireSphere(position, radius);
     }
 
-    private IEnumerator DelayedDetection()
+    public IEnumerator DelayedDetection()
     {
         yield return new WaitForSeconds(detectionDelay);
 
-        foreach (Collider2D collider in Physics2D.OverlapCircleAll(attackOrigin.position, radius))
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(attackOrigin.position, radius);
+
+        List<KnockbackFeedback> knockbackScripts = new List<KnockbackFeedback>();
+        List<Health> healthComponents = new List<Health>();
+
+        foreach (Collider2D collider in colliders)
         {
-
             KnockbackFeedback knockbackScript = collider.GetComponent<KnockbackFeedback>();
-
             if (knockbackScript != null)
             {
-                knockbackScript.SetKnockbackMultiplier(knockbackMultiplier);
-                knockbackScript.PlayFeedback(gameObject);
+                knockbackScripts.Add(knockbackScript);
             }
 
-            Health health;
-
-            if (health = collider.GetComponent<Health>())
+            Health healthComponent = collider.GetComponent<Health>();
+            if (healthComponent != null)
             {
-                health.GetHit(damage, transform.parent.gameObject);
+                healthComponents.Add(healthComponent);
             }
         }
+
+        foreach (KnockbackFeedback knockbackScript in knockbackScripts)
+        {
+            knockbackScript.SetKnockbackMultiplier(knockbackMultiplier);
+            knockbackScript.PlayFeedback(gameObject);
+        }
+
+        foreach (Health healthComponent in healthComponents)
+        {
+            healthComponent.GetHit(damage, transform.parent.gameObject);
+        }
+
     }
 }
 
