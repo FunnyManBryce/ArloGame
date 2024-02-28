@@ -969,7 +969,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8531136bd2b32864591df386203277bd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1468,23 +1468,23 @@ MonoBehaviour:
   sounds:
   - name: Dash
     clip: {fileID: 8300000, guid: 80e5d5497a6b048f982af85f858ea7ed, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: Hurt
     clip: {fileID: 8300000, guid: b74782371da0d4c6e984451a48c57816, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: Swing
     clip: {fileID: 8300000, guid: f04a63a7966da4e2ebf322e0eb251714, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: Walk
     clip: {fileID: 8300000, guid: fd1d214329c2f459ba6a0f15099f3360, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
 --- !u!114 &636123735
 MonoBehaviour:

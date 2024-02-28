@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 4372065627759552304}
-  strength: 11
+  strength: 13
   delay: 0.15
   OnBegin:
     m_PersistentCalls:
@@ -560,6 +560,7 @@ MonoBehaviour:
   fireballsTillSummon: 2
   maxSummons: 3
   currentSummons: 0
+  Pyromancer: {fileID: 0}
 --- !u!1 &8077793320127356881
 GameObject:
   m_ObjectHideFlags: 0

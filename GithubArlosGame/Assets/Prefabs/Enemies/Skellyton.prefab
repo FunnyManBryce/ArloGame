@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 4894214719209350057}
   - component: {fileID: 8236505457849073057}
   - component: {fileID: 7384669807664534565}
+  - component: {fileID: 3418213163636828037}
   m_Layer: 8
   m_Name: Skellyton
   m_TagString: Untagged
@@ -196,6 +197,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3418213163636828037}
+        m_TargetAssemblyTypeName: KnockbackFeedback, Assembly-CSharp
+        m_MethodName: PlayFeedback
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeathWithRefrence:
     m_PersistentCalls:
       m_Calls:
@@ -246,7 +259,7 @@ MonoBehaviour:
   summon: {fileID: 7237991207398816772, guid: d48dac256fb027f4188f267f8cac6185, type: 3}
   skeletonBossProjectile: {fileID: 1778373908096998757, guid: 2d728e5933df12c44bb0d4c320f6f04d, type: 3}
   health: {fileID: 1592640175677549316}
-  damage: 25
+  damage: 15
   shotsFiredPerPhase: 5
   maxTimeBetweenShots: 1
   attackDelayStart: 0.5
@@ -346,3 +359,24 @@ MonoBehaviour:
   blinkDuration: 0.1
   blinkColor: {r: 1, g: 0.35283017, b: 0.35283017, a: 1}
   blinkCount: 1
+--- !u!114 &3418213163636828037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364709920442944923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9f6c2fc36cdbd4da99a9d5275821ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 8236505457849073057}
+  strength: 10
+  delay: 0.15
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDone:
+    m_PersistentCalls:
+      m_Calls: []

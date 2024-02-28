@@ -1,4 +1,5 @@
 using UnityEngine.Audio;
+using System;
 using UnityEngine;
 
 public class BryceAudioManager : MonoBehaviour
@@ -12,14 +13,16 @@ public class BryceAudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
+
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
     }
 
-    /*public void Play (string name)
+    public void Play (string name)
     {
-        Sound s = sounds.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
-    }*/
+        Debug.Log("play");
+    }
 }
