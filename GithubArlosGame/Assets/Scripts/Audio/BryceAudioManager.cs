@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BryceAudioManager : MonoBehaviour
 {
-
+    public VolumeControl volumeControl;
     public Sound[] sounds;
     // Start is called before the first frame update
     void Awake()
@@ -12,6 +12,7 @@ public class BryceAudioManager : MonoBehaviour
         foreach(Sound s in sounds) 
         {
             s.source = gameObject.AddComponent<AudioSource>();
+            volumeControl.audioSource.Add(s.source);
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
@@ -23,6 +24,11 @@ public class BryceAudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
-        Debug.Log("play");
+    }
+
+    public void Stop (string name) 
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
     }
 }

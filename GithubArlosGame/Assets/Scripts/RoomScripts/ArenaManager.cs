@@ -28,10 +28,12 @@ public class ArenaManager : MonoBehaviour
         enemiesToSpawn = enemiesPerWave[Wave];
         waveStarted = true;
         spawnTimer = Random.Range(1, 2);
+        FindObjectOfType<BryceAudioManager>().Play("Skeleton Theme");
     }
 
     void Update()
     {
+        
         if (enemiesToSpawn > 0 && spawnTimer <= 0)
         {
             Instantiate(enemies[Random.Range(0,enemies.Capacity)], spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
@@ -52,17 +54,20 @@ public class ArenaManager : MonoBehaviour
             enemiesToSpawn = enemiesPerWave[Wave];
             waveStarted = true;
             spawnTimer = Random.Range(1, 2);
-            if(Wave == 4)
+            if (Wave == 4)
             {
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
-                //play song here
+                FindObjectOfType<BryceAudioManager>().Play("Boss Theme");
+                FindObjectOfType<BryceAudioManager>().Stop("Skeleton Theme");
             }
-            if(Wave == 5)
+            if (Wave == 5)
             {
                 enemies.Add(FireBlob);
                 Instantiate(FireBlob, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
+                FindObjectOfType<BryceAudioManager>().Play("Fire Theme");
+                FindObjectOfType<BryceAudioManager>().Stop("Boss Theme");
             }
             if(Wave == 6)
             {
@@ -121,6 +126,8 @@ public class ArenaManager : MonoBehaviour
             {
                 Instantiate(boss2, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
+                FindObjectOfType<BryceAudioManager>().Play("Boss Theme");
+                FindObjectOfType<BryceAudioManager>().Stop("Fire Theme");
             }
             if(Wave == 15)
             {
@@ -132,9 +139,5 @@ public class ArenaManager : MonoBehaviour
         }
     }
 
-    /*void WaveStart()
-    {
-        
-    }*/
 
 }
