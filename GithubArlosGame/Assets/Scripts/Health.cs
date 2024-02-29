@@ -62,4 +62,18 @@ public class Health : MonoBehaviour
 
         isInvincible = false;
     }
+    public void DashInvincibility()
+    {
+        StartCoroutine(Dashing());
+    }
+    public IEnumerator Dashing()
+    {
+        isInvincible = true;
+
+        invincibilityFeedback?.PlayBlinkFeedback();
+
+        yield return new WaitForSeconds(0.1f + invincibilityDuration/6);
+
+        isInvincible = false;
+    }
 }

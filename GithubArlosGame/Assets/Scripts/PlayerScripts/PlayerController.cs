@@ -99,7 +99,6 @@ public class playerController : MonoBehaviour
     public void PerformDash()
     {
         isDashing = true;
-
         //Set the length of the dash to the how fair the dash would go
         dashTimer = dashLength;
     }
@@ -110,6 +109,7 @@ public class playerController : MonoBehaviour
             rb2d.velocity = oldMovementInput.normalized * dashSpeed;
             dashTimer -= Time.deltaTime;
             canDash = false;
+            health.DashInvincibility();
         }
         else
         {
