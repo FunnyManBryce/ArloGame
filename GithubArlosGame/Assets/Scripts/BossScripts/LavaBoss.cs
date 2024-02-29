@@ -65,7 +65,7 @@ public class LavaBoss : MonoBehaviour
                 isAttacking = true;
             }
         }
-        if (health.currentHealth <= 200 && health.currentHealth > 100)
+        if (health.currentHealth <= 300 && health.currentHealth > 100)
         {
             maxAttacks = 7;
             maxTeleports = 6;

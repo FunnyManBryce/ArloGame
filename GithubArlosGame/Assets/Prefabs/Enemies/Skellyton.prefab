@@ -264,11 +264,12 @@ MonoBehaviour:
   damage: 15
   shotsFiredPerPhase: 5
   maxSummons: 4
+  currentSummons: 0
   maxTimeBetweenShots: 1
   attackDelayStart: 0.5
   moveSpeed: 5
   ramSpeed: 1.5
-  totalStunLength: 0.75
+  totalStunLength: 1.25
   bossTarget: {fileID: 5648586102535853294}
   playerTarget: {fileID: 0}
   summonPositionOne: {fileID: 8320848553850917319}

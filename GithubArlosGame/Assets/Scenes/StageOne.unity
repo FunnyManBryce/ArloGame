@@ -1342,43 +1342,50 @@ MonoBehaviour:
   - name: Dash
     clip: {fileID: 8300000, guid: 80e5d5497a6b048f982af85f858ea7ed, type: 3}
     loop: 0
+    initialVolume: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Hurt
     clip: {fileID: 8300000, guid: b74782371da0d4c6e984451a48c57816, type: 3}
     loop: 0
+    initialVolume: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Swing
     clip: {fileID: 8300000, guid: f04a63a7966da4e2ebf322e0eb251714, type: 3}
     loop: 0
+    initialVolume: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Walk
     clip: {fileID: 8300000, guid: fd1d214329c2f459ba6a0f15099f3360, type: 3}
     loop: 0
+    initialVolume: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Boss Theme
     clip: {fileID: 8300000, guid: ae9a3d06f8a75cb419ed2fce7bfe6f4f, type: 3}
     loop: 1
+    initialVolume: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Skeleton Theme
     clip: {fileID: 8300000, guid: 8531136bd2b32864591df386203277bd, type: 3}
     loop: 1
-    volume: 1
+    initialVolume: 0
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
   - name: Fire Theme
     clip: {fileID: 8300000, guid: 2a3489ba92139c84c82ec14f1d50ae7b, type: 3}
     loop: 1
-    volume: 1
+    initialVolume: 0
+    volume: 0.9
     pitch: 1
     source: {fileID: 0}
 --- !u!114 &636123735
@@ -1395,7 +1402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 31484740}
   audioSource: []
-  BAM: {fileID: 0}
+  BAM: {fileID: 636123734}
 --- !u!1 &660782554
 GameObject:
   m_ObjectHideFlags: 0

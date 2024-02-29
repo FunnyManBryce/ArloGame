@@ -10,6 +10,7 @@ public class Sound
 
     public bool loop;
 
+    public float initialVolume;
     [Range(0f, 3f)]
     public float volume;
     [Range(.1f, 3f)]

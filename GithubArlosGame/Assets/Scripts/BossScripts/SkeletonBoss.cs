@@ -26,7 +26,7 @@ public class SkeletonBoss : MonoBehaviour
     public float attackDelayStart = 0.75f;
     public float moveSpeed = 5;
     public float ramSpeed = 0.1f;
-    float currentStunLength = 3f;
+    float currentStunLength = 2.75f;
     public float totalStunLength;
 
     public Transform bossTarget;
