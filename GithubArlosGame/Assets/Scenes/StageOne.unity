@@ -1378,7 +1378,21 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 8531136bd2b32864591df386203277bd, type: 3}
     loop: 1
     initialVolume: 0
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+  - name: Spooky Music
+    clip: {fileID: 8300000, guid: 480ec978c06ce604aba250d30064564c, type: 3}
+    loop: 1
+    initialVolume: 0
     volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - name: Fire Theme
+    clip: {fileID: 8300000, guid: 2a3489ba92139c84c82ec14f1d50ae7b, type: 3}
+    loop: 1
+    initialVolume: 0
+    volume: 0.9
     pitch: 1
     source: {fileID: 0}
   - name: Fire Theme
