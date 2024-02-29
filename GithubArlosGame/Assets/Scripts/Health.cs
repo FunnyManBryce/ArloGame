@@ -72,7 +72,7 @@ public class Health : MonoBehaviour
 
         invincibilityFeedback?.PlayBlinkFeedback();
 
-        yield return new WaitForSeconds(0.1f + invincibilityDuration/6);
+        yield return new WaitForSeconds(0.2f + invincibilityDuration/6);
 
         isInvincible = false;
     }
