@@ -5,6 +5,7 @@ using UnityEngine;
 public class invincibilityUpEffect : LevelUpEffect
 {
     public playerController playerController;
+    public PlayerBlinkFeedback playerIFrames;
 
     public override void ApplyEffect()
     {
@@ -14,10 +15,14 @@ public class invincibilityUpEffect : LevelUpEffect
         if (player != null)
         {
             playerController = player.GetComponent<playerController>();
+            playerIFrames = player.GetComponent<PlayerBlinkFeedback>();
 
             if (playerController != null)
             {
-                playerController.health.invincibilityDuration = playerController.health.invincibilityDuration + 0.5f;
+                playerController.health.invincibilityDuration = playerController.health.invincibilityDuration + 0.4f;
+                playerIFrames.blinkCount = playerIFrames.blinkCount + 3;
+                playerIFrames.blinkDuration = playerIFrames.blinkDuration + 0.4f;
+
                 playerController.OnTakeDamage();
             }
             else

@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerBlinkFeedback : MonoBehaviour
 {
     [SerializeField] private Renderer characterRenderer;
-    [SerializeField] private float blinkDuration = 0.1f;
+    public float blinkDuration = 0.1f;
     [SerializeField] private Color blinkColor = new Color(1f, 1f, 1f, 0.25f);
 
     public int blinkCount = 5;
