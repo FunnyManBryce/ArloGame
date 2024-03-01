@@ -28,6 +28,7 @@ public class FireBlobAttack : MonoBehaviour
     
     public void Death()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Fire");
         //Invoke("DeathAttack", attackDelay);
         projectileRotation = new Vector3(0, 0, 90);
         Quaternion newRotation = Quaternion.Euler(projectileRotation);

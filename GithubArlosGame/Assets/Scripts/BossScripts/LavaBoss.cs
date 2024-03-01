@@ -79,6 +79,7 @@ public class LavaBoss : MonoBehaviour
     
     public void Teleport()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Boss Teleport");
         Gerald.transform.position = teleportLocations[Random.Range(0, teleportLocations.Length)];
         currentTeleports++;
         if(currentTeleports == maxTeleports)
@@ -92,6 +93,7 @@ public class LavaBoss : MonoBehaviour
 
     public void Attack()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Fire");
         Instantiate(possibleAttacks[Random.Range(0,possibleAttacks.Length)], bossPosition, projectileTracking.transform.rotation);
         currentAttacks++;
         isAttacking = false;
@@ -111,7 +113,8 @@ public class LavaBoss : MonoBehaviour
         isSpawning = false;
         if(currentSummons < maxSummons)
         {
-            if(currentSummons == 1)
+            FindObjectOfType<BryceAudioManager>().Play("Boss Summon");
+            if (currentSummons == 1)
             {
                 Instantiate(Pyromancer, teleportLocations[Random.Range(0, teleportLocations.Length)], Quaternion.identity);
                 ArenaManager.enemiesAlive++;

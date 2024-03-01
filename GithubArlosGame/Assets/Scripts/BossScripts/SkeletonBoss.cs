@@ -168,12 +168,12 @@ public class SkeletonBoss : MonoBehaviour
                         {
                             currentShotsFired = 0;
                             rammingStart();
+                            FindObjectOfType<BryceAudioManager>().Play("Skele Dash");
                         }
                     }
                 }
                 if (ramming == true)
                 {
-                    FindObjectOfType<BryceAudioManager>().Play("Skele Dash");
                     transform.Translate(-distanceFromPlayer * Time.deltaTime * ramSpeed);
                 }
                 if (stunned == true)

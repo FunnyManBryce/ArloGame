@@ -41,11 +41,13 @@ public class PyroAttacks : EnemyMeleeWeapon
 
     public void Fireball()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Fire");
         Instantiate(fireball, new Vector3(enemyAttackOrigin.position.x, enemyAttackOrigin.position.y), weaponParent.transform.rotation);
     }
 
     public void Summon()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Boss Summon");
         spawnPoint = Object.GetComponent<Transform>();
         GameObject fireBlob1 = Instantiate(fireBlob, new Vector3(spawnPoint.position.x, spawnPoint.position.y), Quaternion.identity);
         fireBlob1.GetComponent<Enemy>().Creator = pyro;
