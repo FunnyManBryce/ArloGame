@@ -1444,6 +1444,13 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Boss Summon
+    clip: {fileID: 8300000, guid: 88b1cbe3caa3fee4b8b103b5edd7aba9, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 0.9
+    pitch: 1
+    source: {fileID: 0}
 --- !u!114 &636123735
 MonoBehaviour:
   m_ObjectHideFlags: 0

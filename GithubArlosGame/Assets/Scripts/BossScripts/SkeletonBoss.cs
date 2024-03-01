@@ -173,6 +173,7 @@ public class SkeletonBoss : MonoBehaviour
                 }
                 if (ramming == true)
                 {
+                    FindObjectOfType<BryceAudioManager>().Play("Skele Dash");
                     transform.Translate(-distanceFromPlayer * Time.deltaTime * ramSpeed);
                 }
                 if (stunned == true)
@@ -201,6 +202,7 @@ public class SkeletonBoss : MonoBehaviour
                         {
                             if(currentSummons < maxSummons)
                             {
+                                FindObjectOfType<BryceAudioManager>().Play("Boss Summon");
                                 GameObject skeleton1 = Instantiate(summon, new Vector3(summonPositionOne.position.x, summonPositionOne.position.y), Quaternion.identity);
                                 skeleton1.GetComponent<Enemy>().Creator = boss;
                                 ArenaManager.enemiesAlive++;

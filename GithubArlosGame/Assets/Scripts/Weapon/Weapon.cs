@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     public float radius = 0.3f;
     public int damage = 1;
     public float knockbackMultiplier = 3f;
-
+    //balls
     public bool attackBlocked;
 
     public Animator animator;
