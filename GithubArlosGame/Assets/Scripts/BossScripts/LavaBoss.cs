@@ -69,13 +69,11 @@ public class LavaBoss : MonoBehaviour
         {
             maxAttacks = 7;
             maxTeleports = 6;
-            //attackDelay = 0.2f;
         }
         if (health.currentHealth <= 100)
         {
             maxAttacks = 10;
             maxTeleports = 7;
-            //attackDelay = 0.1f;
         }
     }
     

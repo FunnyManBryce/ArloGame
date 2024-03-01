@@ -40,7 +40,6 @@ public class PyromancerAI : Enemy
             if (distanceFromPlayer.magnitude > runDistance && isAttacking == false && isSummoning == false)
             {
                 isRunning = false;
-                //Debug.Log("Chasing");
                 agent.speed = moveSpeed;
                 agent.SetDestination(target.position);
             }

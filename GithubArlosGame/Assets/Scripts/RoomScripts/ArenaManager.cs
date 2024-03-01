@@ -100,11 +100,13 @@ public class ArenaManager : MonoBehaviour
             }
             if(Wave == 10)
             {
+                enemies.Remove(Skeleton);
                 Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
             }
             if(Wave == 11)
             {
+                enemies.Remove(FireBlob);
                 Instantiate(lavaGolem, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
                 Instantiate(Pyromancer, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
@@ -112,6 +114,8 @@ public class ArenaManager : MonoBehaviour
             }
             if (Wave == 12)
             {
+                enemies.Remove(FireBlob);
+                enemies.Remove(Skeleton);
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
             }
