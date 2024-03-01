@@ -1427,7 +1427,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c458b6714dab015479d507b21fd2cead, type: 3}
     loop: 0
     initialVolume: 0
-    volume: 0.9
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Boss Summon
@@ -1456,6 +1456,13 @@ MonoBehaviour:
     loop: 0
     initialVolume: 0
     volume: 0.9
+    pitch: 0.7
+    source: {fileID: 0}
+  - name: Enemy Death
+    clip: {fileID: 8300000, guid: c458b6714dab015479d507b21fd2cead, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 1
     pitch: 0.7
     source: {fileID: 0}
 --- !u!114 &636123735
@@ -3584,9 +3591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stage: 0
-  Wave: 13
+  Wave: 0
   realWaveNumber: 1
-  enemiesPerWave: 01000000020000000300000004000000000000000400000004000000050000000500000006000000060000000700000006000000010000000000000000000000
+  enemiesPerWave: 01000000020000000300000004000000000000000400000004000000050000000500000006000000060000000700000006000000060000000000000000000000
   enemies:
   - {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}
   - {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}

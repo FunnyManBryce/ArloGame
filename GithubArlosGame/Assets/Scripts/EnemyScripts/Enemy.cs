@@ -65,10 +65,12 @@ public class Enemy : MonoBehaviour
     {
         ExperienceManager.Instance.AddExperience(expAmount);
         ArenaManager.enemiesAlive--;
+        FindObjectOfType<BryceAudioManager>().Play("Enemy Death");
     }
 
     public void SkeletonSummonDeath()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Enemy Death");
         ArenaManager.enemiesAlive--;
         Destroy(enemy);
         Creator.GetComponent<SkeletonBoss>().currentSummons--;
@@ -76,6 +78,7 @@ public class Enemy : MonoBehaviour
 
     public void FireBlobSummonDeath()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Enemy Death");
         //FireBlobAttack fireBlobAttack = enemy.GetComponent<FireBlobAttack>();
         //fireBlobAttack.Death();
         ArenaManager.enemiesAlive--;
