@@ -35,7 +35,8 @@ public class LavaGolemAttack : EnemyMeleeWeapon
 
     public void Shockwave()
     {
-      Instantiate(shockwave, new Vector3(enemyAttackOrigin.position.x, enemyAttackOrigin.position.y), weaponParent.transform.rotation);
+        FindObjectOfType<BryceAudioManager>().Play("Golem Fire");
+        Instantiate(shockwave, new Vector3(enemyAttackOrigin.position.x, enemyAttackOrigin.position.y), weaponParent.transform.rotation);
     }
     
 }

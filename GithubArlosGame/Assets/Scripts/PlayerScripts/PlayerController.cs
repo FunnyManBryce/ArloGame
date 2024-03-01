@@ -106,6 +106,7 @@ public class playerController : MonoBehaviour
     {
         if (canDash)
         {
+            FindObjectOfType<BryceAudioManager>().Play("Dash");
             rb2d.velocity = oldMovementInput.normalized * dashSpeed;
             dashTimer -= Time.deltaTime;
             canDash = false;

@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     public float knockbackMultiplier = 3f;
     //balls
     public bool attackBlocked;
+    public bool isSword;
 
     public Animator animator;
     public SpriteRenderer weaponRenderer;
@@ -30,6 +31,13 @@ public class Weapon : MonoBehaviour
 
     public void DetectColliders()
     {
+        if(isSword == true)
+        {
+            FindObjectOfType<BryceAudioManager>().Play("Dagger");
+        } else
+        {
+            FindObjectOfType<BryceAudioManager>().Play("Sword");
+        }
         StartCoroutine(DelayedDetection());
     }
 
