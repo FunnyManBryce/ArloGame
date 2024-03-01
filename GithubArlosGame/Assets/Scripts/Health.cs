@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     public bool isInvincible = false;
     public float invincibilityDuration = 1.5f;
 
-    [SerializeField] private PlayerBlinkFeedback invincibilityFeedback;
+    public PlayerBlinkFeedback invincibilityFeedback;
 
     [SerializeField] playerController player;
     public void InitializeHealth(int healthValue)
