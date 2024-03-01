@@ -115,6 +115,7 @@ public class SkeletonBoss : MonoBehaviour
 
                         if (doneFiring == false)
                         {
+                            FindObjectOfType<BryceAudioManager>().Play("Magma");
                             Debug.Log("firing");
                             projectileRotation = new Vector3(0, 0, 90);
                             Quaternion newRotation = Quaternion.Euler(projectileRotation);
@@ -245,6 +246,7 @@ public class SkeletonBoss : MonoBehaviour
             randomDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             if (ramming == true)
             {
+                FindObjectOfType<BryceAudioManager>().Play("Skele Thud");
                 stunned = true;
                 ramming = false;
             }

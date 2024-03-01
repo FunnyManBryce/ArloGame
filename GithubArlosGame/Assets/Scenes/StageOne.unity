@@ -1339,15 +1339,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeControl: {fileID: 636123735}
   sounds:
-  - name: Dash
-    clip: {fileID: 8300000, guid: 80e5d5497a6b048f982af85f858ea7ed, type: 3}
+  - name: Sword Swing
+    clip: {fileID: 8300000, guid: eaae8fe8d600e1f459f34aa5757fa3b8, type: 3}
     loop: 0
     initialVolume: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: Hurt
-    clip: {fileID: 8300000, guid: b74782371da0d4c6e984451a48c57816, type: 3}
+  - name: Dash
+    clip: {fileID: 8300000, guid: f11db4559b3ffff45b62e9327fc5535d, type: 3}
     loop: 0
     initialVolume: 0
     volume: 1
@@ -1360,8 +1360,8 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: Walk
-    clip: {fileID: 8300000, guid: fd1d214329c2f459ba6a0f15099f3360, type: 3}
+  - name: Dagger
+    clip: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
     loop: 0
     initialVolume: 0
     volume: 1
@@ -1395,11 +1395,53 @@ MonoBehaviour:
     volume: 0.9
     pitch: 1
     source: {fileID: 0}
-  - name: Fire Theme
-    clip: {fileID: 8300000, guid: 2a3489ba92139c84c82ec14f1d50ae7b, type: 3}
-    loop: 1
+  - name: Boss Teleport
+    clip: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
+    loop: 0
     initialVolume: 0
-    volume: 0.9
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - name: Boss Spawn
+    clip: {fileID: 8300000, guid: 21c4a490b24ba2045bc815f7626a40ef, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Level Up
+    clip: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: Fire
+    clip: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Taking Damage
+    clip: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Magma
+    clip: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Skele Thud
+    clip: {fileID: 8300000, guid: c458b6714dab015479d507b21fd2cead, type: 3}
+    loop: 0
+    initialVolume: 0
+    volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!114 &636123735
