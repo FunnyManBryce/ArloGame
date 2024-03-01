@@ -50,35 +50,21 @@ public class Weapon : MonoBehaviour
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(attackOrigin.position, radius);
 
-        List<KnockbackFeedback> knockbackScripts = new List<KnockbackFeedback>();
-        List<Health> healthComponents = new List<Health>();
-
         foreach (Collider2D collider in colliders)
         {
             KnockbackFeedback knockbackScript = collider.GetComponent<KnockbackFeedback>();
             if (knockbackScript != null)
             {
-                knockbackScripts.Add(knockbackScript);
+                knockbackScript.SetKnockbackMultiplier(knockbackMultiplier);
+                knockbackScript.PlayFeedback(gameObject);
             }
 
             Health healthComponent = collider.GetComponent<Health>();
             if (healthComponent != null)
             {
-                healthComponents.Add(healthComponent);
+                healthComponent.GetHit(damage, transform.parent.gameObject);
             }
         }
-
-        foreach (KnockbackFeedback knockbackScript in knockbackScripts)
-        {
-            knockbackScript.SetKnockbackMultiplier(knockbackMultiplier);
-            knockbackScript.PlayFeedback(gameObject);
-        }
-
-        foreach (Health healthComponent in healthComponents)
-        {
-            healthComponent.GetHit(damage, transform.parent.gameObject);
-        }
-
     }
 }
 
