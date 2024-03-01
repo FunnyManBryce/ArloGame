@@ -58,6 +58,7 @@ public class ArenaManager : MonoBehaviour
             {
                 Instantiate(boss1, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
+                FindObjectOfType<BryceAudioManager>().Play("Boss Spawn");
                 FindObjectOfType<BryceAudioManager>().Play("Boss Theme");
                 FindObjectOfType<BryceAudioManager>().Stop("Skeleton Theme");
             }
@@ -130,6 +131,7 @@ public class ArenaManager : MonoBehaviour
             {
                 Instantiate(boss2, spawnPoints[Random.Range(0, 4)].transform.position, Quaternion.identity);
                 enemiesAlive++;
+                FindObjectOfType<BryceAudioManager>().Play("Boss Spawn");
                 FindObjectOfType<BryceAudioManager>().Play("Boss Theme");
                 FindObjectOfType<BryceAudioManager>().Stop("Fire Theme");
             }

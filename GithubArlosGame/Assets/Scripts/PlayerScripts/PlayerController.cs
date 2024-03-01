@@ -147,6 +147,7 @@ public class playerController : MonoBehaviour
 
     private void LevelUp()
     {
+        FindObjectOfType<BryceAudioManager>().Play("Level Up");
         Time.timeScale = 0;
         pauseMenu.SetActive(false);
         levelUpMenu.SetActive(true);
