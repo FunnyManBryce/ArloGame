@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11a1b212eff8f6418f661ec0fe0d63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Creator: {fileID: 0}
   target: {fileID: 0}
   enemyTarget: {fileID: 4838719328554928952}
   agent: {fileID: 0}
@@ -293,6 +294,7 @@ MonoBehaviour:
   attackDistance: 2
   moveSpeed: 3
   player: {fileID: 0}
+  enemy: {fileID: 0}
   expAmount: 50
 --- !u!114 &2705977029009518425
 MonoBehaviour:
@@ -561,7 +563,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerPosition: {x: 0, y: 0}
   enemyAttackOrigin: {fileID: 2399267956746580600}
-  enemyRadius: 1
+  enemyRadius: 0.8
   enemyDamage: 15
   attackDuration: 0.7
   attackCooldown: 0.7
