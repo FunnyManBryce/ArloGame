@@ -25,7 +25,8 @@ public class LevelUpMenu : RestartScene
             button.onClick.RemoveAllListeners();
 
             TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-            
+            Image buttonImage = button.GetComponentInChildren<Image>();
+
             LevelUpEffect defaultEffect = button.GetComponent<LevelUpEffect>();
             if (defaultEffect != null)
             {
