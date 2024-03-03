@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: Damage Up
-  buttonIcon: {fileID: 0}
+  buttonIcon: {fileID: 21300000, guid: 1aa690313f6e55149963f4b7fe68a9a6, type: 3}
   Player: {fileID: 0}

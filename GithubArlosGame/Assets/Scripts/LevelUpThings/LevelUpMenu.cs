@@ -6,7 +6,6 @@ using TMPro;
 public class LevelUpMenu : RestartScene
 {
     public List<LevelUpEffect> levelUpEffects;
-
     public List<Button> buttons;
 
     public void Resume()
@@ -18,6 +17,7 @@ public class LevelUpMenu : RestartScene
     {
         InitializeMenu();
     }
+
     public void ResetAndApplyEffects(Button clickedButton)
     {
         foreach (Button button in buttons)
@@ -25,15 +25,18 @@ public class LevelUpMenu : RestartScene
             button.onClick.RemoveAllListeners();
 
             TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-            Image buttonImage = button.GetComponentInChildren<Image>();
+            Image buttonImage = button.GetComponentInChildren<Image>(); // Change here
 
             LevelUpEffect defaultEffect = button.GetComponent<LevelUpEffect>();
             if (defaultEffect != null)
             {
-
                 if (buttonText != null)
                 {
                     buttonText.text = defaultEffect.buttonText;
+                }
+                if (buttonImage != null)
+                {
+                    buttonImage.sprite = defaultEffect.buttonIcon;
                 }
             }
 
@@ -41,6 +44,10 @@ public class LevelUpMenu : RestartScene
             if (buttonText != null)
             {
                 buttonText.text = randomEffect.buttonText;
+            }
+            if (buttonImage != null)
+            {
+                buttonImage.sprite = randomEffect.buttonIcon;
             }
             button.onClick.AddListener(() => randomEffect.ApplyEffect());
         }
@@ -64,8 +71,12 @@ public class LevelUpMenu : RestartScene
                 {
                     buttonText.text = defaultEffect.buttonText;
                 }
+                Image buttonImage = button.GetComponentInChildren<Image>(); // Change here
+                if (buttonImage != null)
+                {
+                    buttonImage.sprite = defaultEffect.buttonIcon;
+                }
             }
-
             ResetAndApplyEffects(button);
         }
     }

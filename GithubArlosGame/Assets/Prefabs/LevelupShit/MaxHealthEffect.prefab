@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: Max Health
-  buttonIcon: {fileID: 0}
+  buttonIcon: {fileID: 21300000, guid: 53f26ec33992b6c44b9008a02bf14973, type: 3}
   playerController: {fileID: 0}

@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9f9712d5bb2464196761734c213a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonColor: {r: 1, g: 0, b: 0, a: 0}
   buttonText: Full Heal
-  buttonIcon: {fileID: 21300000, guid: 89f7c6d544d5e4e77830de52be244f8b, type: 3}
+  buttonIcon: {fileID: 21300000, guid: 0ef55ba9b82307f449d23bb0239e6be2, type: 3}
   playerController: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}

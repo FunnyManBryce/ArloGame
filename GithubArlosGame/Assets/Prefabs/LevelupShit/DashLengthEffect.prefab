@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: Dash Length
-  buttonIcon: {fileID: 0}
+  buttonIcon: {fileID: 21300000, guid: db8d4907d5e5e1a459742e4f06143409, type: 3}
   playerController: {fileID: 0}

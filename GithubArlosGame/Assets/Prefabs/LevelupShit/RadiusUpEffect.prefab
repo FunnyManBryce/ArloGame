@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: Attack Range
-  buttonIcon: {fileID: 0}
+  buttonIcon: {fileID: 21300000, guid: ee5d14a6ee66e744da1e7d24c3ed6ef1, type: 3}
   Player: {fileID: 0}

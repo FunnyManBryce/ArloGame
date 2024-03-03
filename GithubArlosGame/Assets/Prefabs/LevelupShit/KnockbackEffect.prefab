@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: Knockback Up
-  buttonIcon: {fileID: 0}
+  buttonIcon: {fileID: 21300000, guid: fad5b9cc180ec2741b943c41b9b60bf0, type: 3}
   Player: {fileID: 0}
