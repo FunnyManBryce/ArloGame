@@ -1304,14 +1304,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ae9a3d06f8a75cb419ed2fce7bfe6f4f, type: 3}
     loop: 1
     initialVolume: 0
-    volume: 0.9
+    volume: 0.8
     pitch: 1
     source: {fileID: 0}
   - name: Skeleton Theme
     clip: {fileID: 8300000, guid: 8531136bd2b32864591df386203277bd, type: 3}
     loop: 1
     initialVolume: 0
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - name: Spooky Music
@@ -1325,7 +1325,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2a3489ba92139c84c82ec14f1d50ae7b, type: 3}
     loop: 1
     initialVolume: 0
-    volume: 0.8
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
   - name: Boss Teleport
@@ -1388,14 +1388,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
     loop: 0
     initialVolume: 0
-    volume: 0.9
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Golem Fire
     clip: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
     loop: 0
     initialVolume: 0
-    volume: 0.9
+    volume: 1
     pitch: 0.7
     source: {fileID: 0}
   - name: Enemy Death
@@ -3683,7 +3683,7 @@ MonoBehaviour:
   Stage: 0
   Wave: 0
   realWaveNumber: 1
-  enemiesPerWave: 01000000020000000300000004000000000000000400000004000000050000000500000006000000060000000700000006000000060000000000000000000000
+  enemiesPerWave: 01000000020000000300000004000000000000000400000004000000050000000500000006000000060000000700000005000000040000000000000000000000
   enemies:
   - {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}
   - {fileID: 7237991207398816772, guid: 2c5d8c7fccbba8540b032f86b423e5ab, type: 3}

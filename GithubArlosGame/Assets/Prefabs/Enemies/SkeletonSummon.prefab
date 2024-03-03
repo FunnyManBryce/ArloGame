@@ -563,7 +563,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerPosition: {x: 0, y: 0}
   enemyAttackOrigin: {fileID: 2399267956746580600}
-  enemyRadius: 1
+  enemyRadius: 0.8
   enemyDamage: 15
   attackDuration: 0.7
   attackCooldown: 0.7
