@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MaxHealEffect : LevelUpEffect
 {
@@ -17,8 +18,9 @@ public class MaxHealEffect : LevelUpEffect
 
             if (playerController != null)
             {
-                playerController.health.maxHealth = playerController.health.maxHealth + 55;
-                playerController.health.currentHealth = playerController.health.currentHealth + 5;
+                playerController.health.maxHealth = playerController.health.maxHealth + 75;
+                playerController.health.currentHealth = playerController.health.currentHealth + 25;
+                //scale up the player.transform.scale by 1.1f
                 playerController.OnTakeDamage();
             }
             else
