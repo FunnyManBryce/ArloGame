@@ -127,6 +127,7 @@ public class playerController : MonoBehaviour
 
     public void CanDashReset()
     {
+        Debug.Log("WHAT");
         if (!canDash)
         {
             canDash = true;
