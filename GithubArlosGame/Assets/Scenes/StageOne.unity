@@ -3870,6 +3870,8 @@ MonoBehaviour:
   - {fileID: 442762470}
   - {fileID: 92687852}
   - {fileID: 1525075682}
+  wait: 0
+  time: 3
 --- !u!1 &1283492183
 GameObject:
   m_ObjectHideFlags: 0

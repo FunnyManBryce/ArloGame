@@ -155,7 +155,6 @@ public class playerController : MonoBehaviour
         Time.timeScale = 0;
         pauseMenu.SetActive(false); //possibly cause of pause menu issue on level up
         levelUpMenu.SetActive(true);
-        //levelUpMenuScript.LevelUp();
         health.maxHealth += 20;
         health.currentHealth += 70;
         if (health.currentHealth > health.maxHealth)

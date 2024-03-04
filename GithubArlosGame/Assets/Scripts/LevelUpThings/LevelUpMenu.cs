@@ -9,19 +9,11 @@ public class LevelUpMenu : RestartScene
     public List<LevelUpEffect> levelUpEffects;
     public List<Button> buttons;
 
-    /*public bool wait = false;
-    public float time = 0.5f;
-    public GameObject levelUpMenu;*/
+    public bool wait = false;
+    public float time = 3;
     public void Resume()
     {
-        //if (wait == false)
-        //{
             Time.timeScale = 1;
-        /*} else
-        {
-            levelUpMenu.SetActive(true);
-        }*/
-        
     }
 
     public void Start()
@@ -92,17 +84,25 @@ public class LevelUpMenu : RestartScene
         }
     }
 
-    /*public void LevelUp()
+    public void LevelUp()
     {
         StartCoroutine(UpgradeDelay());
     }
 
     public IEnumerator UpgradeDelay()
     {
+        foreach (Button button in buttons)
+        {
+            button.interactable = false;
+        }    
         Debug.Log("gritty?");
-        wait = true;
+        //wait = true;
         yield return new WaitForSeconds(time);
-        wait = false;
+        //wait = false;
         Debug.Log("GRITTY!");
-    }*/
+        foreach (Button button in buttons)
+        {
+            button.interactable = true;
+        }
+    }
 }
