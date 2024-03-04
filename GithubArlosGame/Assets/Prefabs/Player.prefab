@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionDelay: 0.1
-  attackDelay: 1.2
+  attackDelay: 1.5
   attackOrigin: {fileID: 5985599614967278510}
   radius: 0.1
   damage: 0
@@ -602,7 +602,8 @@ MonoBehaviour:
   weaponRenderer: {fileID: 2592435684448855974}
   projectile: {fileID: 1438435654808208330, guid: 123a1a10828cc6a43a956453a8d43b9b, type: 3}
   weaponParent: {fileID: 5615361693147083686}
-  projectileDamage: 20
+  projectileDamage: 25
+  scaleAmount: 0
 --- !u!95 &680483007436787862
 Animator:
   serializedVersion: 5

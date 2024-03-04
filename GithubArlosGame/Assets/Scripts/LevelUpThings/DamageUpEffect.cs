@@ -20,7 +20,7 @@ public class DamageUpEffect : LevelUpEffect
             {
                 Player.WeaponParent.weapons[0].damage = Player.WeaponParent.weapons[0].damage + 4;
                 Player.WeaponParent.weapons[1].damage = Player.WeaponParent.weapons[1].damage + 8;
-                Player.WeaponParent.weapons[2].GetComponent<Staff>().projectileDamage = Player.WeaponParent.weapons[2].GetComponent<Staff>().projectileDamage + 8;
+                Player.WeaponParent.weapons[2].GetComponent<Staff>().projectileDamage = Player.WeaponParent.weapons[2].GetComponent<Staff>().projectileDamage + 10;
             }
             else
             {
