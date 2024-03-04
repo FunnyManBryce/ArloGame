@@ -20,8 +20,10 @@ public class RadiusUpEffect : LevelUpEffect
             {
                 float knifeScaleAmount = 0.3f;
                 float swordScaleAmount = 0.6f;
+                float staffScaleAmount = 3.5f;
                 Player.WeaponParent.weapons[0].GetComponent<Weapon>().ChangeScale(knifeScaleAmount);
                 Player.WeaponParent.weapons[1].GetComponent<Weapon>().ChangeScale(swordScaleAmount);
+                Player.WeaponParent.weapons[2].GetComponent<Staff>().scaleAmount = Player.WeaponParent.weapons[2].GetComponent<Staff>().scaleAmount + staffScaleAmount;
                 Player.WeaponParent.weapons[0].radius = Player.WeaponParent.weapons[0].radius + 0.2f;
                 Player.WeaponParent.weapons[1].radius = Player.WeaponParent.weapons[1].radius + 0.4f;
             }

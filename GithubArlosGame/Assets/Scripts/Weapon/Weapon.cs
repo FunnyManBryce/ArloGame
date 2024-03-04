@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     //balls
     public bool attackBlocked;
     public bool isSword;
+    public bool isStaff;
 
     public Animator animator;
     public SpriteRenderer weaponRenderer;
@@ -34,7 +35,11 @@ public class Weapon : MonoBehaviour
         if(isSword == true)
         {
             FindObjectOfType<BryceAudioManager>().Play("Dagger");
-        } else
+        } else if(isStaff == true)
+        {
+            FindObjectOfType<BryceAudioManager>().Play("Sword");
+        }
+        else
         {
             FindObjectOfType<BryceAudioManager>().Play("Sword");
         }
