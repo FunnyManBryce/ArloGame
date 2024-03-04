@@ -43,7 +43,11 @@ public class Health : MonoBehaviour
             {
                 StartCoroutine(StartInvicibilty());
             }
-            player.OnTakeDamage();
+            if(player != null)
+            {
+                player.OnTakeDamage();
+
+            }
         }
         else
         {

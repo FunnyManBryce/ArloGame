@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
             FindObjectOfType<BryceAudioManager>().Play("Dagger");
         } else if(isStaff == true)
         {
-            FindObjectOfType<BryceAudioManager>().Play("Sword");
+            FindObjectOfType<BryceAudioManager>().Play("Magma");
         }
         else
         {
@@ -65,18 +65,19 @@ public class Weapon : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
+            Debug.Log("hit an enemy");
             KnockbackFeedback knockbackScript = collider.GetComponent<KnockbackFeedback>();
-            if (knockbackScript != null)
-            {
+            //if (knockbackScript != null)
+            //{
                 knockbackScript.SetKnockbackMultiplier(knockbackMultiplier);
                 knockbackScript.PlayFeedback(gameObject);
-            }
+            //}
 
             Health healthComponent = collider.GetComponent<Health>();
-            if (healthComponent != null)
-            {
+            //if (healthComponent != null)
+            //{
                 healthComponent.GetHit(damage, transform.parent.gameObject);
-            }
+            //}
         }
     }
 }

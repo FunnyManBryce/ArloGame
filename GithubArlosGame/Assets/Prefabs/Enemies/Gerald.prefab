@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3803852785588679712}
   - component: {fileID: 4034829945985944124}
   - component: {fileID: 7147775060502664568}
+  - component: {fileID: 1363884080894513192}
   m_Layer: 8
   m_Name: Gerald
   m_TagString: Untagged
@@ -355,6 +356,27 @@ MonoBehaviour:
   invincibilityDuration: 0
   invincibilityFeedback: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &1363884080894513192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446608834040801963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9f6c2fc36cdbd4da99a9d5275821ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 3803852785588679712}
+  strength: 0
+  delay: 0.15
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3565352301239007653
 GameObject:
   m_ObjectHideFlags: 0

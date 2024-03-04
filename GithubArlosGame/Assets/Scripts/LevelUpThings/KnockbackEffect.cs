@@ -18,8 +18,8 @@ public class KnockbackEffect : LevelUpEffect
 
             if (Player != null)
             {
-                Player.WeaponParent.weapons[0].knockbackMultiplier = Player.WeaponParent.weapons[0].knockbackMultiplier + 0.5f;
-                Player.WeaponParent.weapons[1].knockbackMultiplier = Player.WeaponParent.weapons[1].knockbackMultiplier + 1;
+                Player.WeaponParent.weapons[0].knockbackMultiplier = Player.WeaponParent.weapons[0].knockbackMultiplier + 0.3f;
+                Player.WeaponParent.weapons[1].knockbackMultiplier = Player.WeaponParent.weapons[1].knockbackMultiplier + 0.6f;
             }
             else
             {
