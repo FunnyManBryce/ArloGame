@@ -71,8 +71,10 @@ public class PyromancerAI : Enemy
     {
         ArenaManager.enemiesAlive--;
         Destroy(Pyromancer);
-        lavaBoss = GameObject.Find("Gerald(Clone)").GetComponent<LavaBoss>();
-        lavaBoss.currentSummons--;
+        if(GameObject.Find("Gerald(Clone)").GetComponent<LavaBoss>() != null)
+        {
+            lavaBoss = GameObject.Find("Gerald(Clone)").GetComponent<LavaBoss>();
+            lavaBoss.currentSummons--;
+        }
     }
-    
 }

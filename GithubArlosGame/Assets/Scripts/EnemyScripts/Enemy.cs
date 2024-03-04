@@ -72,18 +72,23 @@ public class Enemy : MonoBehaviour
     {
         FindObjectOfType<BryceAudioManager>().Play("Enemy Death");
         ArenaManager.enemiesAlive--;
+        if(Creator != null)
+        {
+            Creator.GetComponent<SkeletonBoss>().currentSummons--;
+        }
         Destroy(enemy);
-        Creator.GetComponent<SkeletonBoss>().currentSummons--;
     }
 
     public void FireBlobSummonDeath()
     {
         FindObjectOfType<BryceAudioManager>().Play("Enemy Death");
-        //FireBlobAttack fireBlobAttack = enemy.GetComponent<FireBlobAttack>();
-        //fireBlobAttack.Death();
         ArenaManager.enemiesAlive--;
-        Destroy(enemy);  //causes a really minor bug that won't exist if we remove the bug of enemies not getting cleaved properly
-        Creator.GetComponent<PyromancerAI>().currentSummons--;
+          //causes a really minor bug that won't exist if we remove the bug of enemies not getting cleaved properly
+        if(Creator != null)
+        {
+            Creator.GetComponent<PyromancerAI>().currentSummons--;
+        }
+        Destroy(enemy);
     }
     
     public IEnumerator SpawnCooldown()
