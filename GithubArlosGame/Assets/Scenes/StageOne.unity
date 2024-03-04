@@ -7529,6 +7529,10 @@ PrefabInstance:
       propertyPath: currentExperience
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2384011829972160131, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
+      propertyPath: levelUpMenuScript
+      value: 
+      objectReference: {fileID: 1273716608}
     - target: {fileID: 2757617537629531110, guid: 4660f6ff25e68c94c8966bbc53a303ae, type: 3}
       propertyPath: isSword
       value: 1
