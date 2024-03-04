@@ -22,6 +22,7 @@ public class MaxHealEffect : LevelUpEffect
                 playerController.health.currentHealth = playerController.health.currentHealth + 25;
                 //scale up the player.transform.scale by 1.1f
                 playerController.OnTakeDamage();
+                playerController.pauseMenu.SetActive(true);
             }
             else
             {

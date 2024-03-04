@@ -19,6 +19,7 @@ public class DashLengthEffect : LevelUpEffect
             {
                 playerController.dashSpeed = playerController.dashSpeed + 15f;
                 playerController.OnTakeDamage();
+                playerController.pauseMenu.SetActive(true);
             }
             else
             {

@@ -22,6 +22,7 @@ public class invincibilityUpEffect : LevelUpEffect
                 playerController.health.invincibilityDuration = playerController.health.invincibilityDuration + 0.4f;
                 playerIFrames.blinkCount = playerIFrames.blinkCount + 3;
                 playerIFrames.blinkDuration = playerIFrames.blinkDuration + 0.4f;
+                playerController.pauseMenu.SetActive(true);
 
                 playerController.OnTakeDamage();
             }

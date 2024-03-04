@@ -5,6 +5,7 @@ using UnityEngine;
 public class KnockbackEffect : LevelUpEffect
 {
     public player Player;
+    public playerController PlayerController;
 
     public override void ApplyEffect()
     {
@@ -15,11 +16,13 @@ public class KnockbackEffect : LevelUpEffect
         {
             //refrence the player not player controller
             Player = player.GetComponent<player>();
+            PlayerController = player.GetComponent<playerController>();
 
             if (Player != null)
             {
                 Player.WeaponParent.weapons[0].knockbackMultiplier = Player.WeaponParent.weapons[0].knockbackMultiplier + 0.3f;
                 Player.WeaponParent.weapons[1].knockbackMultiplier = Player.WeaponParent.weapons[1].knockbackMultiplier + 0.6f;
+                PlayerController.pauseMenu.SetActive(true);
             }
             else
             {
