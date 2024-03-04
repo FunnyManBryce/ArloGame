@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionDelay: 0.1
-  attackDelay: 1.5
+  attackDelay: 1.2
   attackOrigin: {fileID: 5985599614967278510}
   radius: 0.1
   damage: 0

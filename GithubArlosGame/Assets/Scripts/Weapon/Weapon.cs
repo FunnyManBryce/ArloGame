@@ -65,7 +65,7 @@ public class Weapon : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            Debug.Log("hit an enemy");
+            //Debug.Log("hit an enemy");
             KnockbackFeedback knockbackScript = collider.GetComponent<KnockbackFeedback>();
             //if (knockbackScript != null)
             //{

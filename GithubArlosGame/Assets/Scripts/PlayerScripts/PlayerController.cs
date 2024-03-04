@@ -32,6 +32,8 @@ public class playerController : MonoBehaviour
     public HealthBar healthBar;
     public GameObject pauseMenu;
     public GameObject levelUpMenu;
+
+    //public LevelUpMenu levelUpMenuScript;
     //stuff I wont change
     #region
     private void Awake()
@@ -151,8 +153,9 @@ public class playerController : MonoBehaviour
     {
         FindObjectOfType<BryceAudioManager>().Play("Level Up");
         Time.timeScale = 0;
-        pauseMenu.SetActive(false);
+        pauseMenu.SetActive(false); //possibly cause of pause menu issue on level up
         levelUpMenu.SetActive(true);
+        //levelUpMenuScript.LevelUp();
         health.maxHealth += 20;
         health.currentHealth += 70;
         if (health.currentHealth > health.maxHealth)
