@@ -84,6 +84,7 @@ public class LavaBoss : MonoBehaviour
         currentTeleports++;
         if(currentTeleports == maxTeleports)
         {
+            Gerald.transform.position = teleportLocations[Random.Range(0, teleportLocations.Length)];
             isTeleporting = false;
             currentTeleports = 0;
             onCooldown = true;

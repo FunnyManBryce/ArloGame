@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionDelay: 0.1
-  attackDelay: 0.13
+  attackDelay: 0.11
   attackOrigin: {fileID: 3277282562725920119}
   radius: 0.4
   damage: 10
